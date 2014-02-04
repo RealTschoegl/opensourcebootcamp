@@ -1,0 +1,11 @@
+---
+layout: mini
+title: "Mini Lesson: Vim"
+category: mini-lesson
+---
+
+Learn how to use Vim.
+
+* [Maximum Awesome](https://github.com/square/maximum-awesome)
+* [VimSnake](http://www.vimsnake.com/)
+* [Vim.org](http://www.vim.org/)

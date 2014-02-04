@@ -1,0 +1,4 @@
+name: DevChamps Ruby on Rails Course
+markdown: redcarpet
+pygments: true
+baseurl: /devchamps

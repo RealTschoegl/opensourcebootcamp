@@ -1,0 +1,9 @@
+---
+layout: mini
+title: "Mini Lesson: Hirb"
+category: mini-lesson
+---
+
+Learn how to use the Hirb Ruby Gem.
+
+* [Hirb Ruby Gem](https://github.com/cldwalker/hirb)

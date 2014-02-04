@@ -1,0 +1,17 @@
+---
+layout: default
+title: DevChamps Ruby on Rails Course
+---
+
+<div id="home">
+  <h1>Lessons</h1>
+  <p>These are the major lessons to be covered in the DevChamps Ruby on Rails Developer course.  They are here organized by the day on which they are intended to be taught, but that may change depending on the progress of the students.  Regardless of the speed with which the material is covered, they should be completed in this order - they are intended to be cumulative.</p>
+  <p>==============================</p>
+  <ul class="posts">
+    {% for post in site.posts reversed %}
+	    {% if post.categories contains 'lesson' %}
+	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+	    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
