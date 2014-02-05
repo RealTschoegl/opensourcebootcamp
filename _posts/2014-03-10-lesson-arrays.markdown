@@ -268,6 +268,26 @@ irb(main):012:0> fruit[-1]
 
 ### _What Can I Do With It?_
 
+Store data that you receive as inputs. Let's use this script for, example:
+
+{% highlight ruby linenos %}
+puts "What is your favorite fruit?"
+fruit = gets.chomp
+grocery_list = []
+grocery_list << fruit
+
+puts "What is your favorite veggie?"
+veggie = gets.chomp
+grocery_list << veggie
+
+puts "Your Grocery List:"
+puts "=================="
+puts grocery_list
+
+print grocery_list
+
+{% endhighlight %}
+
 ### _Why Do I Care?_
 
 ## Exercise
