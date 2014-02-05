@@ -306,6 +306,8 @@ So what did I do here?  First, I had it put the text of the question [puts "What
 
 Lastly, I print the list (with some really underwhelming styling) and then print it out so you can see the array and return. 
 
+Refactoring question: Can you think of a way that we could trim _two_ lines of code from this?  How big of an improvement did or did it not make?
+
 ### _Why Do I Care?_
 
 ## Exercise
