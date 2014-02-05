@@ -302,6 +302,10 @@ Cauliflower
 ["Melon", "Cauliflower"]=> true
 {% endhighlight %}
 
+So what did I do here?  First, I had it put the text of the question [puts "What is your favorite fruit?"].  Then I had it allow for the user to input their answer whose content was saved in a variable [fruit = gets.chomp].  The variable's contents are then inserted into an array as an element.  I do the same again for the veggie question, but assign the content to a variable named veggie before assigning it to the array.  
+
+Lastly, I print the list (with some really underwhelming styling) and then print it out so you can see the array and return. 
+
 ### _Why Do I Care?_
 
 ## Exercise
