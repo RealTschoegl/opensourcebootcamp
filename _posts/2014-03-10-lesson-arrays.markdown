@@ -288,6 +288,20 @@ print grocery_list
 
 {% endhighlight %}
 
+Which gives us the following output (with my inputs given to the questions):
+
+{% highlight irb linenos %}
+What is your favorite fruit?
+Melon
+What is your favorite veggie?
+Cauliflower
+Your Grocery List:
+==================
+Melon
+Cauliflower
+["Melon", "Cauliflower"]=> true
+{% endhighlight %}
+
 ### _Why Do I Care?_
 
 ## Exercise
