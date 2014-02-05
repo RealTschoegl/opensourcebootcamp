@@ -2,6 +2,7 @@
 layout: post
 title: "Week 3 : Lesson 1 : Testing"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -42,3 +43,10 @@ So it works. For now.  Bwahaha.
 * [RSpec Gem](https://github.com/rspec)
 * [Better Specs](http://betterspecs.org/)
 
+## Week's Badges
+
+This week, the following badges are up for grabs:
+
+* **Teach One** for [Vim](http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-vim.html) 
+
+Let your instructor know at lunch if you would like to earn one of these badges.

@@ -2,6 +2,7 @@
 layout: page
 title: "Week 6 : Lesson 1 : Redis and Fog"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -44,3 +45,11 @@ These technologies make it easy to put data in places other than your database.
 * [Fog Ruby Gem](https://github.com/fog/fog)
 * [Introduction to Using Redis with Rails](http://www.sitepoint.com/introduction-to-using-redis-with-rails/)
 * [RailsCast 383: Uploading to Amazon S3](http://railscasts.com/episodes/383-uploading-to-amazon-s3)
+
+## Week's Badges
+
+This week, the following badges are up for grabs:
+
+* **Teach One** for [Environment Variables](http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-environment-variables.html) 
+
+Let your instructor know at lunch if you would like to earn one of these badges.

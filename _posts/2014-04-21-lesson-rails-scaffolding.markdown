@@ -2,6 +2,7 @@
 layout: page
 title: "Week 8 : Lesson 1 : Scaffolding"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -43,3 +44,11 @@ Get started quickly. Get into what an MVC is.
 * [Michael Hartl's Rails Tutorial on Scaffolding](http://ruby.railstutorial.org/chapters/a-demo-app#sec-2_2)
 * [Customizing You Workflow](http://guides.rubyonrails.org/generators.html#customizing-your-workflow)
 * [Railscast for Generators in Rails 3](http://railscasts.com/episodes/216-generators-in-rails-3)
+
+## Week's Badges
+
+This week, the following badges are up for grabs:
+
+* **Teach One** for [Better Errors](http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-better-errors.html) 
+
+Let your instructor know at lunch if you would like to earn one of these badges.

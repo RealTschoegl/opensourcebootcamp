@@ -2,6 +2,7 @@
 layout: page
 title: "Week 3 : Project 1 : Sales Page"
 category: project
+published: true
 ---
 
 ## Project Description
@@ -27,3 +28,7 @@ Make a page for your autobiography.
 * [Week 3 : Lesson 3 : CSS]({{ site.baseurl}}{% post_url 2014-03-19-lesson-css %})
 * [Week 3 : Lesson 4 : DevTools]({{ site.baseurl}}{% post_url 2014-03-20-lesson-devtools %})
 * [Week 3 : Lesson 5 : jQuery]({{ site.baseurl}}{% post_url 2014-03-21-lesson-jquery %})
+
+## Push Music
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/vCadcBR95oU" frameborder="0" allowfullscreen></iframe>

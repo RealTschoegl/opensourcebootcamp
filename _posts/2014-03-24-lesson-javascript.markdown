@@ -2,6 +2,7 @@
 layout: post
 title: "Week 4 : Lesson 1 : JavaScript"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -45,3 +46,11 @@ What makes the internet work.  Literally.
 * [Crockford on JavaScript](http://yuiblog.com/crockford/)
 * [JavaScript Garden](http://bonsaiden.github.io/JavaScript-Garden/#intro)
 * [WTFJs](http://wtfjs.com/)
+
+## Week's Badges
+
+This week, the following badges are up for grabs:
+
+* **Teach One** for [Awesome Print](http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-awesome-print.html) 
+
+Let your instructor know at lunch if you would like to earn one of these badges.

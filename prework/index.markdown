@@ -5,7 +5,7 @@ title: Prework
 
 ## Prework
 
-Listed below is the Prework for each student who is going to attend the Open Source Ruby on Rails Developers Program.  The required coursework is that which every student is expected to have completed by the time the course starts.  The recommended/optional/advanced coursework would give a student a strong start and foundation for the course, but covers material that a student is not expected to know going in.
+Listed below is the Prework for each student who is going to attend the DevChamps Ruby on Rails Developers Program.  The required coursework is that which every student is expected to have completed by the time the course starts.  The recommended/optional/advanced coursework would give a student a strong start and foundation for the course, but covers material that a student is not expected to know going in.
 
 All of the courses listed are either free, in the case of Codecademy, or are free tracks, as with Code School, or can be accessed using a free trial, in the case of Treehouse.  
 

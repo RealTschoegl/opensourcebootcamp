@@ -2,6 +2,7 @@
 layout: page
 title: "Week 7 : Lesson 1 : Backbone Models"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -44,3 +45,11 @@ Part of [Week 7 : Project 1 : To Do List]({{ site.baseurl}}{% post_url 2014-04-1
 * [Backbone Rails](http://www.backbonerails.com/)
 * [Backbone on Rails (Part 1)](http://railscasts.com/episodes/323-backbone-on-rails-part-1)
 * [Backbone on Rails (Part 2)](http://railscasts.com/episodes/325-backbone-on-rails-part-2)
+
+## Week's Badges
+
+This week, the following badges are up for grabs:
+
+* 
+
+Let your instructor know at lunch if you would like to earn one of these badges.

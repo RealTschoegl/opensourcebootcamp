@@ -2,6 +2,7 @@
 layout: page
 title: "Week 10 : Lesson 5 : Integration Testing"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -44,3 +45,6 @@ Integration testing (sometimes called integration and testing, abbreviated I&T) 
 * [RSpec.info](http://rspec.info/)
 * [RailsCast: Request Specs and Capybara](http://railscasts.com/episodes/257-request-specs-and-capybara)
 
+## Blogging
+
+Each weekend, you will be expected to write a blog entry as homework.  The blog entry must be submitted to your Moodle blog, but can also be published on an external blog (publishing publicly is our recommendation, but not a requirement).  Feel free to write about something you have learned, a challenge you solved, a particularly interesting technology, or a challenging problem.  You are also welcome to write about your personal experiences of the program and or learning Ruby on Rails.  What we are hoping is that you can begin getting comfortable with publishing your thoughts online and contributing to the Ruby community.

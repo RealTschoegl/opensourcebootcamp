@@ -4,7 +4,7 @@ title: "Week 1 : Lesson 1 : Ice Breakers"
 category: lesson
 ---
 
-Welcome to the Open Source Ruby on Rails Developer course!  Over the next twelve weeks you will be learning web development, computer programming, and product design.  By the end, you will be real, honest-to-goodness hackers.  But first, who are you?
+Welcome to the Open Source Bootcamp's inaugural Ruby on Rails Developer course!  Over the next twelve weeks you will be learning web development, computer programming, and product design.  By the end, you will be real, honest-to-goodness hackers.  But first, who are you?
 
 ## Getting Comfy
 
@@ -13,7 +13,7 @@ Get to know your week's pairing partner.  Each week you will be assigned a new p
 * Get into the pairs we just assigned you.
 * Introduce yourself to your partner.  Ask them the following questions:
  * What was the best thing that happened to you this weekend?
- * Why do you live in the XXXXX area?
+ * Why do you live in the XXXXXX area?
  * Who do you admire the most?
  * What is your favorite quote?
  * What is your favorite animal? List three adjectives to explain your choice. 

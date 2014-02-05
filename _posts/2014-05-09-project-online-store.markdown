@@ -2,6 +2,7 @@
 layout: page
 title: "Weeks 10 : Project 1 : Online store"
 category: project
+published: true
 ---
 
 ## Project Description
@@ -32,4 +33,6 @@ Sell stuff.
 * [Weeks 10 : Lesson 4 : Unit Testing]({{ site.baseurl}}{% post_url 2014-05-08-lesson-unit-testing %})
 * [Weeks 10 : Lesson 5 : Integration Testing]({{ site.baseurl}}{% post_url 2014-05-09-lesson-integration-testing %})
 
+## Push Music
 
+<iframe width="640" height="480" src="//www.youtube.com/embed/9jK-NcRmVcw" frameborder="0" allowfullscreen></iframe>

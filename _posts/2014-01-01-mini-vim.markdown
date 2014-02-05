@@ -1,11 +1,18 @@
 ---
 layout: mini
 title: "Mini Lesson: Vim"
-category: mini-lesson
+category: "mini-lesson"
+published: true
 ---
 
-Learn how to use Vim.
+In order to gain your very own **Teach One** badge, you will teach your fellow students how to use **Vim**. 
+
+The lesson should last no longer that 15 minutes and include a live coding exercise.  The idea is not to become a subject matter expert in whatever you are teaching, but instead to introduce your fellow students and yourself to a useful technology.
 
 * [Maximum Awesome](https://github.com/square/maximum-awesome)
 * [VimSnake](http://www.vimsnake.com/)
 * [Vim.org](http://www.vim.org/)
+* [Vim Study Lab in a File](https://gist.github.com/gmccreight/7519289/raw/master.vim)
+* [Vimcasts](http://vimcasts.org/)
+* [Vimtutor](http://linuxcommand.org/man_pages/vimtutor1.html)
+* [Vimgolf](http://vimgolf.com/)

@@ -2,6 +2,7 @@
 layout: page
 title: "Week 9 : Lesson 7 : Modules"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -43,3 +44,7 @@ Not all code belongs in a designated place.
 * [Programming Ruby: Modules](http://ruby-doc.com/docs/ProgrammingRuby/)
 * [Module < Object](http://api.rubyonrails.org/classes/Module.html)
 * [Creating and using modules in Rails](http://blog.crowdint.com/2012/11/20/creating-and-using-modules-in-rails.html)
+
+## Blogging
+
+Each weekend, you will be expected to write a blog entry as homework.  The blog entry must be submitted to your Moodle blog, but can also be published on an external blog (publishing publicly is our recommendation, but not a requirement).  Feel free to write about something you have learned, a challenge you solved, a particularly interesting technology, or a challenging problem.  You are also welcome to write about your personal experiences of the program and or learning Ruby on Rails.  What we are hoping is that you can begin getting comfortable with publishing your thoughts online and contributing to the Ruby community.

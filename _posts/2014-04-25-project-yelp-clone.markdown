@@ -2,6 +2,7 @@
 layout: page
 title: "Week 8 : Project 1 : Yelp Clone"
 category: project
+published: true
 ---
 
 ## Project Description
@@ -25,3 +26,7 @@ category: project
 * [Week 8 : Lesson 3 : Controllers]({{ site.baseurl}}{% post_url 2014-04-23-lesson-rails-controllers %})
 * [Week 8 : Lesson 4 : Models]({{ site.baseurl}}{% post_url 2014-04-24-lesson-rails-models %})
 * [Week 8 : Lesson 5 : Active Record & Databases]({{ site.baseurl}}{% post_url 2014-04-25-lesson-rails-active-record %})
+
+## Push Music
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/chbeWBWqb3s" frameborder="0" allowfullscreen></iframe>

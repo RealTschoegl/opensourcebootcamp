@@ -2,6 +2,7 @@
 layout: page
 title: "Week 5 : Lesson 1 : Sinatra"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -41,5 +42,10 @@ Get your business logic online easily.
 * [Sinatra Tutorial](http://mherman.org/blog/2013/06/08/designing-with-class-sinatra-plus-postgresql-plus-heroku/#.Uth7sGRDucw)
 * [A Beginner's Sinatra Tutorial](http://joeyates.info/2010/04/07/a-beginners-sinatra-tutorial/)
 
+## Week's Badges
 
+This week, the following badges are up for grabs:
 
+* **Teach One** for [Hirb](http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-hirb.html) 
+
+Let your instructor know at lunch if you would like to earn one of these badges.

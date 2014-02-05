@@ -2,6 +2,7 @@
 layout: post
 title: "Week 2 : Lesson 2 : Methods"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -19,6 +20,12 @@ Part of [Week 2 : Project 1 : Crime Blotter]({{ site.baseurl}}{% post_url 2014-0
 Methods are objects that do things.  Isn't that cool?
 
 ### _How Does It Work?_
+
+nums = [1, 2, 3, 4, 5]
+
+nums.each do |num|
+    puts num
+end
 
 ### _What Can I Do With It?_
 
@@ -41,4 +48,3 @@ Methods are objects that do things.  Isn't that cool?
 * [Ruby Documentation on Methods](http://www.ruby-doc.org/core-2.1.0/Method.html)
 * [Ruby Methods](http://www.tutorialspoint.com/ruby/ruby_methods.htm)
 * [Writing Own Ruby Methods](http://rubylearning.com/satishtalim/writing_own_ruby_methods.html)
-

@@ -2,6 +2,7 @@
 layout: page
 title: "Week 5 : Project 1 : Twitter App"
 category: project
+published: true
 ---
 
 ## Project Description
@@ -21,3 +22,7 @@ category: project
 * [Week 5 : Lesson 1 : Sinatra]({{ site.baseurl}}{% post_url 2014-03-31-lesson-sinatra %})
 * [Week 5 : Lesson 2 : SQL]({{ site.baseurl}}{% post_url 2014-04-01-lesson-sql %})
 * [Week 5 : Lesson 3 : Twitter API]({{ site.baseurl}}{% post_url 2014-04-02-lesson-twitter-api %})
+
+## Push Music
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/YME1QGGcmEg" frameborder="0" allowfullscreen></iframe>

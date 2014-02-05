@@ -2,6 +2,7 @@
 layout: page
 title: "Week 7 : Lesson 3 : Backbone Collections"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -44,3 +45,7 @@ Part of [Week 7 : Project 1 : To Do List]({{ site.baseurl}}{% post_url 2014-04-1
 * [Backbone Rails](http://www.backbonerails.com/)
 * [Backbone on Rails (Part 1)](http://railscasts.com/episodes/323-backbone-on-rails-part-1)
 * [Backbone on Rails (Part 2)](http://railscasts.com/episodes/325-backbone-on-rails-part-2)
+
+## Blogging
+
+Each weekend, you will be expected to write a blog entry as homework.  The blog entry must be submitted to your Moodle blog, but can also be published on an external blog (publishing publicly is our recommendation, but not a requirement).  Feel free to write about something you have learned, a challenge you solved, a particularly interesting technology, or a challenging problem.  You are also welcome to write about your personal experiences of the program and or learning Ruby on Rails.  What we are hoping is that you can begin getting comfortable with publishing your thoughts online and contributing to the Ruby community.

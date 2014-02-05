@@ -2,6 +2,7 @@
 layout: page
 title: "Week 10 : Lesson 1 : Bootstrap"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -44,4 +45,11 @@ What do backend developers do when they need good design, but have limited amoun
 * [RailsCast 328: Twitter Bootstrap Basics](http://railscasts.com/episodes/328-twitter-bootstrap-basics)
 * [RailsCast 329: More on Twitter Bootstrap](http://railscasts.com/episodes/329-more-on-twitter-bootstrap)
 
+## Week's Badges
 
+This week, the following badges are up for grabs:
+
+* **Teach One** for [Procfile](http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-procfile.html) 
+* **Teach One** for [Cron Jobs](http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-cron-job.html)
+
+Let your instructor know at lunch if you would like to earn one of these badges.

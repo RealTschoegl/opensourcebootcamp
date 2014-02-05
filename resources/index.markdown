@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Resources
+published: true
 ---
 
 ## Resources
@@ -15,6 +16,7 @@ This is a list of learning resources that we will use during the course and that
 * [RubyDoc.info](http://www.rubydoc.info/)
 * [Ruby User's Guide](http://www.rubyist.net/~slagell/ruby/getstarted.html)
 * [Ruby-Lang](https://www.ruby-lang.org/en/)
+* [Cheat Sheet: Ruby](http://overapi.com/ruby/)
 
 ##### Rails Documentation
 
@@ -33,6 +35,7 @@ This is a list of learning resources that we will use during the course and that
 * [Ruby Monk](https://rubymonk.com/)
 * [The Bastards Book of Ruby](http://ruby.bastardsbook.com/)
 * [Confreaks](http://confreaks.com/)
+* [Ruby5](http://ruby5.envylabs.com/)
 
 ##### Online Classes
 
@@ -40,6 +43,7 @@ This is a list of learning resources that we will use during the course and that
 * [Code School](https://www.codeschool.com/paths/ruby)
 * [Treehouse](http://teamtreehouse.com/tracks/rails-development)
 * [Thoughtbot](https://learn.thoughtbot.com/prime)
+* [UT on Rails](http://www.schneems.com/ut-rails/)
 
 ##### Ruby Exercises
 
@@ -69,8 +73,12 @@ This is a list of learning resources that we will use during the course and that
 * [RubyMine](http://www.jetbrains.com/ruby/)
 * [Emacs](http://www.gnu.org/software/emacs/)
 
+##### General
+
+* [Bento](http://www.bentobox.io/)
+
 ##### Run Code
 
 * [Ideone](https://ideone.com/)
 
-\* For those of you who are curious about the story of _why the lucky stiff_, [this article](http://www.slate.com/articles/technology/technology/2012/03/ruby_ruby_on_rails_and__why_the_disappearance_of_one_of_the_world_s_most_beloved_computer_programmers_.single.html) is a good start. 
+\* For those of you who are curious about the story of _why the lucky stiff_, [this article](http://www.slate.com/articles/technology/technology/2012/03/ruby_ruby_on_rails_and__why_the_disappearance_of_one_of_the_world_s_most_beloved_computer_programmers_.single.html) is a good start.

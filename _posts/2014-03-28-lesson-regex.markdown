@@ -2,6 +2,7 @@
 layout: post
 title: "Week 4 : Lesson 7 : Regex"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -43,3 +44,6 @@ User input comes in all shapes and sizes.
 * [Ruby Regex Tutorial](http://www.tutorialspoint.com/ruby/ruby_regular_expressions.htm)
 * [Regular Expressions Spotlight](https://www.bluebox.net/insight/blog-article/regular-expressions-spotlight-groups-pt-i)
 
+## Blogging
+
+Each weekend, you will be expected to write a blog entry as homework.  The blog entry must be submitted to your Moodle blog, but can also be published on an external blog (publishing publicly is our recommendation, but not a requirement).  Feel free to write about something you have learned, a challenge you solved, a particularly interesting technology, or a challenging problem.  You are also welcome to write about your personal experiences of the program and or learning Ruby on Rails.  What we are hoping is that you can begin getting comfortable with publishing your thoughts online and contributing to the Ruby community.

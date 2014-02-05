@@ -6,15 +6,21 @@ published: true
 ---
 
 ## Project Description
-For our final project, you'll be creating a product using an Agile methodology. Agile is: 
+For your final project, you'll be creating a product using the Agile software development process. What is Agile? 
 
 > Agile software development is a group of software development methods based on iterative and incremental development, where requirements and solutions evolve through collaboration between self-organizing, cross-functional teams. It promotes adaptive planning, evolutionary development and delivery, a time-boxed iterative approach, and encourages rapid and flexible response to change. It is a conceptual framework that promotes foreseen tight interactions throughout the development cycle.
 
-This development process is very similar to the one that you can expect to use in your future workplace.  Most companies nowadays use some sort of version of Agile or a narrower subtype of Agile.  Take a look below at the steps in the process:
+Agile is based around the idea of never building anything unless it has been demonstrated to be necessary by relevant stakeholders.  It stands in contrast to Waterfall development, in which a complete plan is laid out at the beginning of the development process and then is executed entirely.
+
+Most tech companies nowadays use some version of Agile or a narrower subtype of Agile.  The Agile development process that we are going to be following for this project is very similar to the one that you can expect to use in your future workplace(s).  Take a look below at the steps in the process:
 
 ### Ideation
 
-Brainstorm a body of ideas on spaces that you might want to address.  Then clarify and condense those ideas.  Evaluate and edit those ideas.  Now you generate ideas for those spaces.  Then clarify and condense those ideas.  Evaluate and edit those ideas.  Now generate possible solutions for those spaces.  Then clarify and condense those possible solutions.  Then evaluate and edit those solutions.
+Brainstorm a body of ideas on "spaces" that you might want to address.  Then clarify and condense those ideas into a couple of basic ideas.  Then evaluate and edit those ideas until you have to come one space that you would like to target.  
+
+Next, think of some relevant and interesting problems for the space you have selected.  Then clarify and condense those problems into a couple of easily stated and understood problems.  Evaluate and edit those down to one specific problem that you would like to solve.
+
+Finally, generate possible solutions for that problem.  Take those possible solutions and clarify and condense those into a few easily explainable solutions.  Then evaluate and edit those solution into one solution that you think is feasible and worthwhile to take on.
 
 * [IDEO Method Cards](http://www.ideo.com/by-ideo/method-cards)
 * [The Agile Brainstorming Process](http://www.enterpriseefficiency.com/author.asp?section_id=2741&doc_id=270374)
@@ -29,11 +35,9 @@ Once you have your idea, it's time to plan how to make the thing.  This means co
 1. User scenarios.  Who do you anticipate using the app?  What are the problems/pain points that they experience?
 2. User cases.  How will they use the app?  What features will they need?
 
-One you have a clear idea of what features you need to build, you can decide on what you need to build.  The next topic is then feasibility: how to execute in the time given with the resources available. Each day you will decide with your partner(s) on what task(s) you will each complete that day.  Keep these in mind:
+Once you have a clear idea of what features you need to build, you can decide on what you need to build to provide those features.  
 
-* Each sprint must have a goal
-* Stay focused on the goal / top stories
-* Make sure daily goals are clear (we know the steps we need to take to achieve them)
+The next topic is then feasibility: how to make those features in the time given with the resources available. Since each sprint must have a goal, this is where you decide what the goal of your sprint (i.e. what do you want to have built by the end) is going to be.
 
 [What an Agile Process Looks Like](http://www.cio.com/article/174650/What_an_Agile_Process_Looks_Like)
 
@@ -41,7 +45,12 @@ One you have a clear idea of what features you need to build, you can decide on 
 
 ### Sprint
 
-This is the part where you execute your plans and write some code.  Here are some guiding Agile principles to keep in mind as you code:
+Each day you will decide with your partner(s) on what task(s) you will each complete that day towards completing the features that you want to implement in this sprint.  Keep these two things in mind:
+
+* Stay focused on the goal / top stories
+* Make sure daily goals are clear (we know the steps we need to take to achieve them)
+
+When deciding on what tasks to tackle on a daily basis, make sure to keep some guiding Agile principles in mind as you code:
 
 * Working software is the primary measure of progress.
 * Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
@@ -53,34 +62,57 @@ This is the part where you execute your plans and write some code.  Here are som
 
 ### Demo
 
-You will demo the product to the class and get their feedback on what you have built and how it can be improved.  If you have something that they can try out, so much the better.  Some notes on effective criticism:
+You will demo the product to the class and get their feedback on what you have built and how it can be improved.  If you have something that they can try out, so much the better.  Some notes on how to perform effective criticism:
 
-1. Have Clear Objectives
-2. Create a Neutral Environment
-3. Use Fewer Words With More Meaning
-4. Align the Criticism With the Subject’s Goals
-5. Encourage Self-Critique
+1. Have Clear Objectives - The criticism is to help the other teams develop better features, not to attack the quality of their app or the problem they have identified (that's my job!).
+2. Create a Neutral Environment - It's scary to be up there. Openness and comfort will lead to better features than defensiveness and embarrassment.  Make sure each group comes away feeling energized, not deflated.    
+3. Use Fewer Words With More Meaning - If an app has a specific problem that needs to be addressed, you should be able to diagnose it succinctly.  Broad diagnoses or issues lead to poor feature design. 
+4. Align the Criticism With the Subject’s Goals - The presenter is bringing their app in front of you to make it better.  Don't use the criticism as an opportunity for some unsolicited bluesky thinking or suggestions on how to improve your own app.  There are times for those things. This isn't it.
+5. Encourage Self-Critique - The team building the app knows it much better than you do.  Make sure that they can voice their own concerns about their features so the group can help them to solve them.
 
 [How to Give and Receive Positive Criticism](http://business.time.com/2013/05/27/how-to-give-and-receive-positive-criticism/)
 
 ### Iterate
 
-This is a combination of a number of the steps listed above:
+Basically, do all of the above steps again in order to address the problems that were identified during the demo:
 
 * Plan about how to change the product based on user feedback.
 * Make those changes quickly and demo it frequently to ensure it works.
-* Push the code for your project to production - in this case, to a Heroku app.
+* Push the code for your project to production.
 
 ### Retrospective
 
-Discuss what went right and what went wrong.
+The purpose of a retrospective is to discuss what went right and what went wrong in your development process.  You will do this retrospective first in pairs and then as a discussion with the whole group.  Here are some questions to get you started:
 
-* [Effective Sprint Retrospectives](http://msdn.microsoft.com/en-us/library/jj620912.aspx)
-* [Agile Management and the Sprint Retrospective](http://www.dummies.com/how-to/content/agile-management-and-the-sprint-retrospective.html)
+1. Did we identify the right space? 
+2. Did we identify the right problem? 
+3. Did we identify the right solution? 
+4. Did we communicate effectively as a team? 
+5. Did we complete the features that we wanted to?  Why or why not? 
+6. What was the hardest thing to build? 
+7. What was the easiest thing to build? 
+8. Was there anything you built that you did not need? 
+9. Were your daily goals well-calibrated? 
+10. What will you do differently in the future? 
+
+[Effective Sprint Retrospectives](http://msdn.microsoft.com/en-us/library/jj620912.aspx)
+
+[Agile Management and the Sprint Retrospective](http://www.dummies.com/how-to/content/agile-management-and-the-sprint-retrospective.html)
+
+[Agile Retrospective Wiki](http://retrospectivewiki.org/index.php?title=Main_Page)
 
 ## Parameters
 
 1. You'll pair with a partner for the duration of the project.  You will be able to choose the partner that you work with.
-2. The first ideation and planning session will be on Monday afternoon.  After that, you will work for three days on the project.  On Friday of the first week, you will demo the application you have built to the class. You will then take their suggestions on the next Monday and begin planning/ideating how to improve what you have worked on.  You will then demo the completed application on that Thursday afternoon.   
-3. The application can be a Ruby on Rails application, but does not have to be.  If you would prefer to focus on another language or framework, feel free.
-4. You can pick any idea for the application that appeals to you, but it must be possible to finish an MVP (minimum-viable-product) by the Thursday deadline.
+2. You can pick any idea for the application that appeals to you, but it must be possible to finish an MVP (Minimum Viable Product) by the Thursday deadline.
+3. The first ideation and planning session will be on Monday afternoon.  After that, you will work for three days on the project.  On Friday of the first week, you will demo the application you have built to the class. You will then take their suggestions on the next Monday and begin planning/ideating how to improve what you have worked on.  You will then demo the completed application on that Thursday afternoon.   
+4. The application can be a Ruby on Rails application, but does not have to be.  If you would prefer to focus on another language or framework (Sinatra, Backbone, etc.), feel free.
+5. On that Thursday, it should be pushed to production.  In general, that will mean a Heroku app.  If you have another idea for how to host it that makes more sense to you - Github pages, Amazon, etc. - give it a go.
+
+## Push Music
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/AI_S0tswjWc" frameborder="0" allowfullscreen></iframe>
+
+## Blogging
+
+Each weekend, you will be expected to write a blog entry as homework.  The blog entry must be submitted to your Moodle blog, but can also be published on an external blog (publishing publicly is our recommendation, but not a requirement).  Feel free to write about something you have learned, a challenge you solved, a particularly interesting technology, or a challenging problem.  You are also welcome to write about your personal experiences of the program and or learning Ruby on Rails.  What we are hoping is that you can begin getting comfortable with publishing your thoughts online and contributing to the Ruby community.

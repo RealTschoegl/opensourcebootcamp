@@ -19,6 +19,11 @@ body {
   text-align: center;
 }
 
+img {
+  max-width: 850px;
+  border: 1px solid black;
+}
+
 blockquote p {
   margin-left: 20px;
 }

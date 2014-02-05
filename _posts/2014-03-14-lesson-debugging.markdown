@@ -2,6 +2,7 @@
 layout: post
 title: "Week 2 : Lesson 5 : Debugging and Commenting"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -49,3 +50,7 @@ You might not have noticed yet, but things go wrong.  There are two ways of deal
 * [Comments for Ruby](http://ruby.about.com/od/rubyfeatures/a/comment.htm)
 * [TomDoc for Ruby](http://tomdoc.org/)
 * [RailsCast 280: Pry with Rails](http://railscasts.com/episodes/280-pry-with-rails)
+
+## Blogging
+
+Each weekend, you will be expected to write a blog entry as homework.  The blog entry must be submitted to your Moodle blog, but can also be published on an external blog (publishing publicly is our recommendation, but not a requirement).  Feel free to write about something you have learned, a challenge you solved, a particularly interesting technology, or a challenging problem.  You are also welcome to write about your personal experiences of the program and or learning Ruby on Rails.  What we are hoping is that you can begin getting comfortable with publishing your thoughts online and contributing to the Ruby community.

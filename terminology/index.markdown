@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Terminology
+published: true
 ---
 
 ## Terminology
 
-Here is a glossary of some of the terms that you will hear people mention pretty frequently, in conversations within the Ruby community, whose meanings might not be readily apparent. They are non-technical terms that stand in for programming or development concepts, not pieces of technical jargon or specific Ruby or Rails designations.
+Here is a glossary of some of the terms that you will hear people mention pretty frequently, in conversations within the Ruby community, whose meanings might not be readily apparent. Some of these are non-technical terms that stand in for programming or development concepts, while others are pieces of technical jargon or specific Ruby or Rails designations.
 
  ==============================
 

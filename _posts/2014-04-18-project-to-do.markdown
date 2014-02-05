@@ -2,6 +2,7 @@
 layout: page
 title: "Week 7 : Project 1 : To Do List"
 category: project
+published: true
 ---
 
 ## Project Description
@@ -21,3 +22,7 @@ category: project
 * [Week 7 : Lesson 1 : Backbone Models]({{ site.baseurl}}{% post_url 2014-04-14-lesson-backbone-models %})
 * [Week 7 : Lesson 2 : Backbone Views]({{ site.baseurl}}{% post_url 2014-04-16-lesson-backbone-views %})
 * [Week 7 : Lesson 3 : Backbone Collections]({{ site.baseurl}}{% post_url 2014-04-18-lesson-backbone-collections %})
+
+## Push Music
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/9fWvub_WBho" frameborder="0" allowfullscreen></iframe>

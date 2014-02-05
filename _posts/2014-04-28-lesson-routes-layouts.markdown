@@ -2,6 +2,7 @@
 layout: page
 title: "Week 9 : Lesson 1 : Routes and Layouts"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -41,3 +42,11 @@ Getting there and what you see when you get there.
 * [Rails Guides: Rails Routing from the Outside In](http://guides.rubyonrails.org/routing.html)
 * [Rails Guides: Layouts and Rendering in Rails](http://guides.rubyonrails.org/layouts_and_rendering.html)
 
+## Week's Badges
+
+This week, the following badges are up for grabs:
+
+* **Teach One** for [Ordering a Gemfile](http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-ordering-gemfile.html)
+* **Teach One** for [Rake Task](http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-rake-task.html)
+
+Let your instructor know at lunch if you would like to earn one of these badges.

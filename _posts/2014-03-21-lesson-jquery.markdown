@@ -2,6 +2,7 @@
 layout: post
 title: "Week 3 : Lesson 5 : jQuery"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -42,3 +43,7 @@ Part of [Week 3 : Project 1 : Sales Page]({{ site.baseurl}}{% post_url 2014-03-2
 * [Learn jQuery](http://learn.jquery.com/)
 * [jQuery API](http://api.jquery.com/)
 * [jQuery Cheatsheet](http://oscarotero.com/jquery/)
+
+## Blogging
+
+Each weekend, you will be expected to write a blog entry as homework.  The blog entry must be submitted to your Moodle blog, but can also be published on an external blog (publishing publicly is our recommendation, but not a requirement).  Feel free to write about something you have learned, a challenge you solved, a particularly interesting technology, or a challenging problem.  You are also welcome to write about your personal experiences of the program and or learning Ruby on Rails.  What we are hoping is that you can begin getting comfortable with publishing your thoughts online and contributing to the Ruby community.
