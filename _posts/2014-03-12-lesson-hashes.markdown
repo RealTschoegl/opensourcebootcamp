@@ -2,6 +2,7 @@
 layout: post
 title: "Week 2 : Lesson 3 : Hashes"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -20,7 +21,15 @@ Hashes are the most common data storage unit you're going to see.  Even when you
 
 ### _How Does It Work?_
 
+A hash is a data storage unit that is composed of what are called "keys" and "values".  Each key is connected to value.  Unlike an array, there is no order in which the key-value pair is added into hash, nor can the information be extracted by knowing the order in which the key-value pair was added.  If you know the key, you can find the value.  If you add a key, you also have to add a value.
+
+So first, how do we create a hash?
+
+
+
 ### _What Can I Do With It?_
+
+
 
 ### _Why Do I Care?_
 
@@ -40,7 +49,3 @@ Hashes are the most common data storage unit you're going to see.  Even when you
 
 * [Ruby Documentation for Hashes](http://ruby-doc.org/core-2.1.0/Hash.html)
 * [Ruby Hashes](http://www.tutorialspoint.com/ruby/ruby_hashes.htm)
-
-
-
-
