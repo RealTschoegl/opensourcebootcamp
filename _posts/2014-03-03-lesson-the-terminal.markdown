@@ -237,6 +237,7 @@ We'll get to this bit tomorrow.
 
 * [List of Bash Commands](http://ss64.com/bash/)
 * [Treehouse: Console Foundations](http://teamtreehouse.com/library/console-foundations-2)
+* [The Command Line Crash Course](http://cli.learncodethehardway.org/book/)
 
 ## Week's Badges
 
