@@ -96,7 +96,7 @@ DevChamps       GolaZone        HoffmannJozsef  RandomStuff     StockApp
 bedeadly        commitcoffee    maximum-awesome
 {% endhighlight %}
 
-Here we can see a bunch of files of various code projects that I have or am working on.  Cool.  Let's do some of the stuff mentioned above.  First we can create a new file named Stuff.  
+Here we can see a bunch of files of various code projects that I have or am working on.  Cool.  Let's do some of the stuff mentioned above.  First we can create a new folder named Stuff.  
 
 ```
 ➜  Code mkdir Stuff
@@ -111,7 +111,7 @@ DevChamps       GolaZone        HoffmannJozsef  RandomStuff     StockApp        
 bedeadly        commitcoffee    maximum-awesome
 ```
 
-It is!  Let's enter this file.
+It is!  Let's enter this folder.
 
 ```
 ➜  Code cd Stuff
@@ -134,7 +134,7 @@ Nothing there.  Here is a helpful command if we want to create a file.  Let's ma
 index.html
 ```
 
-Now we are going to create another file in our file.
+Now we are going to create another file in our folder.
 
 ```bash
 ➜  Stuff  mkdir Cabinet
