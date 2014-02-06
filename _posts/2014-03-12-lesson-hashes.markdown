@@ -41,6 +41,20 @@ irb(main):002:0> fruit
 => {}
 {% endhighlight %}
 
+What can be the key? Anything!  Here are some examples:
+
+
+
+What can be the value?
+
+How do you add something to a hash?
+
+
+
+What if I want to get information out of a hash? If you know the key, it's pretty easy:
+
+
+
 
 
 ### _What Can I Do With It?_
@@ -65,3 +79,4 @@ irb(main):002:0> fruit
 
 * [Ruby Documentation for Hashes](http://ruby-doc.org/core-2.1.0/Hash.html)
 * [Ruby Hashes](http://www.tutorialspoint.com/ruby/ruby_hashes.htm)
+* [Hashes in Ruby](http://zetcode.com/lang/rubytutorial/hashes/)
