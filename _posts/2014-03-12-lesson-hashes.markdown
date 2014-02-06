@@ -41,7 +41,6 @@ irb(main):002:0> fruit
 => {}
 {% endhighlight %}
 
-Either 
 
 
 ### _What Can I Do With It?_
