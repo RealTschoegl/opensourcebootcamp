@@ -43,7 +43,22 @@ irb(main):002:0> fruit
 
 What can be the key? Anything!  Here are some examples:
 
-
+{% highlight irb linenos %}
+irb(main):006:0> grocery_list = {}
+=> {}
+irb(main):007:0> grocery_list["fruit"] = "mango"
+=> "mango"
+irb(main):008:0> grocery_list[:fruit] = "apple"
+=> "apple"
+irb(main):009:0> grocery_list[["fruit","salad"]] = "raspberry"
+=> "raspberry"
+irb(main):010:0> grocery_list[1] = "items"
+=> "items"
+irb(main):011:0> grocery_list[Object.new] = "Thing"
+=> "Thing"
+irb(main):012:0> grocery_list
+=> {"fruit"=>"mango", :fruit=>"apple", ["fruit", "salad"]=>"raspberry", 1=>"items", #<Object:0x007f8abd95ec10>=>"Thing"}
+{% endhighlight %}
 
 What can be the value?
 
