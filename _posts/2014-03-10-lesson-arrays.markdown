@@ -310,17 +310,31 @@ Refactoring question: Can you think of a way that we could trim _two_ lines of c
 
 ### _Why Do I Care?_
 
+Arrays are one of the easiest data storage methods available and they are found across a lot of different programming languages.  
+
 ## Exercise
+
+Make a list of your favorite shows with their times, using arrays.
 
 ## Happiness Checkpoint
 
+Be prepared to demonstrate your code to the class.  
+
 ## Project Guidelines
+
+Using arrays and inputs, store data on crimes that have been committed.  
 
 ## Solve
 
+When finished, flag down an instructor.
+
 ## Extensions
 
+Add an input option in your program that allows you to change an item in the blotter.
+
 ## Push Instructions
+
+Create a repo and push to Github.  You'll be using this tomorrow.
 
 ## Further Readings
 
