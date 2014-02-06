@@ -23,8 +23,25 @@ Hashes are the most common data storage unit you're going to see.  Even when you
 
 A hash is a data storage unit that is composed of what are called "keys" and "values".  Each key is connected to value.  Unlike an array, there is no order in which the key-value pair is added into hash, nor can the information be extracted by knowing the order in which the key-value pair was added.  If you know the key, you can find the value.  If you add a key, you also have to add a value.
 
-So first, how do we create a hash?
+So first, how do we create a hash? One option:
 
+{% highlight irb linenos %}
+irb(main):001:0> fruit = Hash.new
+=> {}
+irb(main):002:0> fruit
+=> {}
+{% endhighlight %}
+
+Alternatively, you can just make it equal to the curly brackets:
+
+{% highlight irb linenos %}
+irb(main):001:0> fruit = {}
+=> {}
+irb(main):002:0> fruit
+=> {}
+{% endhighlight %}
+
+Either 
 
 
 ### _What Can I Do With It?_
