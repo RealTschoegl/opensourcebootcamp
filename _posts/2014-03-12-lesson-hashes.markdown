@@ -77,13 +77,50 @@ irb(main):038:0> your_hash
 => {"S"=>"B"}
 {% endhighlight %}
 
-What can be the value?  Pretty much anything that can be the key
+What can be the value?  Pretty much anything that can be the key.
 
-How do you add something to a hash?
+How do you add something to a hash?  One, you can add a value to hash on creation:
 
+{% highlight irb linenos %}
+irb(main):001:0> students = { "Thomas" => "John", "Robinson" => "Craig" }
+=> {"Thomas"=>"John", "Robinson"=>"Craig"}
+irb(main):002:0> students
+=> {"Thomas"=>"John", "Robinson"=>"Craig"}
+{% endhighlight %}
 
+Once you have an existing hash, it is as easy as this:
 
-What if I want to get information out of a hash? If you know the key, it's pretty easy:
+{% highlight irb linenos %}
+irb(main):003:0> students["Simpson"] = "Homer"
+=> "Homer"
+irb(main):004:0> students
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer"}
+{% endhighlight %}
+
+Alternatively:
+
+{% highlight irb linenos %}
+irb(main):004:0> students
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer"}
+irb(main):005:0> students.store("Crusoe", "Robinson")
+=> "Robinson"
+irb(main):006:0> students
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson"}
+{% endhighlight %}
+
+Or you can merge an existing hash with your new hash to add to it:
+
+{% highlight irb linenos %}
+irb(main):010:0> a = {"Brewster" => "Punky"}
+=> {"Brewster"=>"Punky"}
+irb(main):011:0> students.merge!(a)
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+{% endhighlight %}
+
+What if I want to get information out of a hash? There are a number of methods to do so, but none of them that work sequentially as with an array. 
+
+If you know the key, it's pretty easy:
+
 
 
 
