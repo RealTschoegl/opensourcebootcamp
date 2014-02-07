@@ -60,7 +60,24 @@ irb(main):012:0> grocery_list
 => {"fruit"=>"mango", :fruit=>"apple", ["fruit", "salad"]=>"raspberry", 1=>"items", #<Object:0x007f8abd95ec10>=>"Thing"}
 {% endhighlight %}
 
-What can be the value?
+You can even use variables as keys and values in a hash - or at least the values from the variables:
+
+{% highlight irb linenos %}
+irb(main):034:0> your_hash = {}
+=> {}
+irb(main):035:0> hash_key = gets.chomp
+S
+=> "S"
+irb(main):036:0> hash_value = gets.chomp
+B
+=> "B"
+irb(main):037:0> your_hash[hash_key] = hash_value
+=> "B"
+irb(main):038:0> your_hash 
+=> {"S"=>"B"}
+{% endhighlight %}
+
+What can be the value?  Pretty much anything that can be the key
 
 How do you add something to a hash?
 
