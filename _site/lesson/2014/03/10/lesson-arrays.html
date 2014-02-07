@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Week 2 : Lesson 1 : Arrays</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Open Source Ruby on Rails Course</a></h1>
+            <a class="extra" href="/">lessons</a>
+            <a class="extra" href="/mini-lessons">mini-lessons</a>
+            <a class="extra" href="/prework">prework</a>
+            <a class="extra" href="/projects">projects</a>
+            <a class="extra" href="/resources">resources</a>
+            <a class="extra" href="/skills">skills</a>
+            <a class="extra" href="/style">style</a>
+            <a class="extra" href="/terminology">terminology</a>
+
+          </div>
+
+          <h2>Week 2 : Lesson 1 : Arrays</h2>
+<p class="meta">10 Mar 2014</p>
+
+==========================================
+
+<div class="post">
+<h2>Review</h2>
+
+<p>Review from <a href="/lesson/2014/03/07/lesson-time.html">Week 1 : Lesson 7 : Time</a>.  One (or more) pair will rehash the previous session&#39;s lesson by teaching the basic learnings to the group.  They will explain it to the others by drawing a diagram, using an analogy, telling a story or in some other way creatively communicating the idea without using code.</p>
+
+<h2>Today&#39;s Project<a name="todays-project"></a></h2>
+
+<p>Part of <a href="/project/2014/03/11/project-crime-blotter.html">Week 2 : Project 1 : Crime Blotter</a>.</p>
+
+<h2>Arrays</h2>
+
+<h3><em>What Is It?</em></h3>
+
+<p>Whereas a variable can hold only one piece of data at time, an array is a type of data storage that can be used to hold multiple pieces of data in a list-like form.</p>
+
+<h3><em>How Does It Work?</em></h3>
+
+<p>As an analogy, an array is a little like a backpack. You put things in one at a time.  Stuff on the bottom can only be found by remembering that its on the bottom.  Otherwise, you gotta root around.  </p>
+
+<p>First of all, this is what an array looks like:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span>
+</code></pre></div>
+<p>There are two ways to create an array.  What is called a &quot;literal constructor&quot; works as follows: </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">fruit</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<p>There is also the &quot;object constructor&quot;:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">007</span> <span class="o">&gt;</span> <span class="n">fruit</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
+ <span class="o">=&gt;</span> <span class="o">[]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">00</span><span class="mi">8</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;apple&quot;</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;apple&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">00</span><span class="mi">9</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;orange&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">010</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;mango&quot;</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;mango&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">011</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span>
+</code></pre></div>
+<p>This one is a bit more complicated.  We first create an empty array.  Then we assign a value to each position in the array.  It&#39;s worth noting that an array&#39;s first position is [0] not [1].  This is a convention that came about as a way to save precious bytes in earlier days of computing.</p>
+
+<p>To get an element from an array, you need to know the position of the element.  So, if we are looking for orange, we have to know that orange is the second element which is in the [1] position.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">016</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">017</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;orange&quot;</span> 
+</code></pre></div>
+<p>There are a couple more ways of doing the above as well.  </p>
+
+<p>To create an array using a literal constructor:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">01</span><span class="mi">9</span> <span class="o">&gt;</span> <span class="n">fruit</span> <span class="o">=</span> <span class="sx">%w(apple orange mango kiwi)</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<p>To push something to an array:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">fruit</span> <span class="o">=</span> <span class="o">[]</span>
+ <span class="o">=&gt;</span> <span class="o">[]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">fruit</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;apple&quot;</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">fruit</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;orange&quot;</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<p>What kinds of things can we put in an array?  </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">various</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;big&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="o">.</span><span class="mi">4</span><span class="p">,</span> <span class="no">Empty</span><span class="o">.</span><span class="n">new</span><span class="p">,</span> <span class="n">nums</span><span class="p">,</span> <span class="ss">:two</span><span class="o">]</span>
+</code></pre></div>
+<p>So integers, both positive and negative, strings, floats, custom objects, variables, and even symbols can be entered into an array.  What&#39;s more, you can also put an array in an array:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">fruit</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">groceries</span> <span class="o">=</span> <span class="o">[</span><span class="n">fruit</span><span class="o">]</span>
+ <span class="o">=&gt;</span> <span class="o">[[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">veggies</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;carrot&quot;</span><span class="p">,</span> <span class="s2">&quot;broccoli&quot;</span><span class="p">,</span> <span class="s2">&quot;onion&quot;</span><span class="o">]</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;carrot&quot;</span><span class="p">,</span> <span class="s2">&quot;broccoli&quot;</span><span class="p">,</span> <span class="s2">&quot;onion&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">004</span> <span class="o">&gt;</span> <span class="n">groceries</span> <span class="o">&lt;&lt;</span> <span class="n">veggies</span>
+ <span class="o">=&gt;</span> <span class="o">[[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;carrot&quot;</span><span class="p">,</span> <span class="s2">&quot;broccoli&quot;</span><span class="p">,</span> <span class="s2">&quot;onion&quot;</span><span class="o">]]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">005</span> <span class="o">&gt;</span> <span class="n">groceries</span>
+ <span class="o">=&gt;</span> <span class="o">[[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;carrot&quot;</span><span class="p">,</span> <span class="s2">&quot;broccoli&quot;</span><span class="p">,</span> <span class="s2">&quot;onion&quot;</span><span class="o">]]</span> 
+</code></pre></div>
+<p>In addition to these basic functions, arrays also have a number of built in methods that replicate or expand on these basic functions of putting stuff in arrays and then getting it out.</p>
+
+<h4>Push</h4>
+
+<p>If you want to add something to the array and don&#39;t know what the last position was, then you can use the <strong>push</strong> method:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">014</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">015</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">.</span><span class="n">push</span> <span class="s2">&quot;kiwi&quot;</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<h4>Insert</h4>
+
+<p>If you want to add a element to your array at a specific position, you can use the <strong>insert</strong> method.  Just specify the position and the element you want to add:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">006</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">007</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;kumquat&quot;</span><span class="p">)</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<h4>Pop</h4>
+
+<p>The <strong>pop</strong> method deletes the last item in an array:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">00</span><span class="mi">9</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">010</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">.</span><span class="n">pop</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;mango&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">011</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<h4>Shift</h4>
+
+<p>The <strong>shift</strong> method returns the first item in an array and deletes it:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">012</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">013</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">.</span><span class="n">shift</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;apple&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">014</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<h4>Delete_at</h4>
+
+<p>Delete an element at a particular index:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">017</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">01</span><span class="mi">8</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">.</span><span class="n">delete_at</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;orange&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">01</span><span class="mi">9</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<h4>Delete</h4>
+
+<p>Delete a particular element anywhere in an array:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">022</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">023</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">)</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;apple&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">024</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<h4>Length</h4>
+
+<p>The <strong>length</strong> method gives you the number of items in an array:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">024</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">025</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">.</span><span class="n">length</span>
+ <span class="o">=&gt;</span> <span class="mi">3</span> 
+</code></pre></div>
+<h4>Each</h4>
+
+<p>The <strong>each</strong> method takes each element in an array and then does something to it:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):003:0&gt; </span><span class="n">fruit</span>
+<span class="lineno">2</span> <span class="go">=&gt; [&quot;kumquat salad&quot;, &quot;peach salad&quot;, &quot;orange salad&quot;]</span>
+<span class="lineno">3</span> <span class="gp">irb(main):004:0&gt; </span><span class="n">fruit</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">x</span> <span class="p">}</span>
+<span class="lineno">4</span> <span class="go">kumquat salad</span>
+<span class="lineno">5</span> <span class="go">peach salad</span>
+<span class="lineno">6</span> <span class="go">orange salad</span>
+<span class="lineno">7</span> <span class="go">=&gt; [&quot;kumquat salad&quot;, &quot;peach salad&quot;, &quot;orange salad&quot;]</span>
+</code></pre></div>
+
+<p>In this case, the syntax could also be read as, &quot;go through the array &#39;fruit&#39; and for reach each element, x, perform the puts actions.&quot;</p>
+
+<h4>Map</h4>
+
+<p>There are two variants of the <strong>map</strong> method. The first method, without an <strong>!</strong>, is a little like <strong>each</strong> in that it takes each element of the array, applies the transformation that you want, and leaves the original array unchanged. The difference is that the <strong>map</strong> method returns an array with your transformation:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">026</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">027</span> <span class="o">&gt;</span> <span class="n">fruit</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">+</span> <span class="s2">&quot; salad&quot;</span><span class="p">}</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;kumquat salad&quot;</span><span class="p">,</span> <span class="s2">&quot;peach salad&quot;</span><span class="p">,</span> <span class="s2">&quot;orange salad&quot;</span><span class="o">]</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">02</span><span class="mi">8</span> <span class="o">&gt;</span> <span class="n">fruit</span>
+ <span class="o">=&gt;</span> <span class="o">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="o">]</span> 
+</code></pre></div>
+<p>In the other variant of the <strong>map</strong> method, the one with the <strong>!</strong>, the array that you are &quot;mapping&quot; is returned with the transformation <em>and</em> the original is also transformed.  That is often the case when the <strong>!</strong> is used:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):001:0&gt; </span><span class="n">fruit</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;kumquat&quot;</span><span class="p">,</span> <span class="s2">&quot;peach&quot;</span><span class="p">,</span> <span class="s2">&quot;orange&quot;</span><span class="o">]</span> 
+<span class="lineno">2</span> <span class="go">=&gt; [&quot;kumquat&quot;, &quot;peach&quot;, &quot;orange&quot;]</span>
+<span class="lineno">3</span> <span class="gp">irb(main):002:0&gt; </span><span class="n">fruit</span><span class="o">.</span><span class="n">map!</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">+</span> <span class="s2">&quot; salad&quot;</span><span class="p">}</span>
+<span class="lineno">4</span> <span class="go">=&gt; [&quot;kumquat salad&quot;, &quot;peach salad&quot;, &quot;orange salad&quot;]</span>
+<span class="lineno">5</span> <span class="gp">irb(main):003:0&gt; </span><span class="n">fruit</span>
+<span class="lineno">6</span> <span class="go">=&gt; [&quot;kumquat salad&quot;, &quot;peach salad&quot;, &quot;orange salad&quot;]</span>
+</code></pre></div>
+
+<h4>Include?</h4>
+
+<p>So what do you do if you want to find something in an array?  The <strong>include?</strong> method comes in handy.  It returns true if the given object is present in the array; otherwise it returns false:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):006:0&gt; </span><span class="n">fruit</span>
+<span class="lineno">2</span> <span class="go">=&gt; [&quot;kumquat salad&quot;, &quot;peach salad&quot;, &quot;orange salad&quot;]</span>
+<span class="lineno">3</span> <span class="gp">irb(main):007:0&gt; </span><span class="n">fruit</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&quot;peach salad&quot;</span><span class="p">)</span>
+<span class="lineno">4</span> <span class="go">=&gt; true</span>
+<span class="lineno">5</span> <span class="gp">irb(main):008:0&gt; </span><span class="n">fruit</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&quot;tomato salad&quot;</span><span class="p">)</span>
+<span class="lineno">6</span> <span class="go">=&gt; false</span>
+</code></pre></div>
+
+<h4>Reverse</h4>
+
+<p>This method is only so handy, but for some reason it is frequently referenced in quizzes.  It returns a reversed version of the given array, but does not change or transform the array:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):009:0&gt; </span><span class="n">fruit</span>
+<span class="lineno">2</span> <span class="go">=&gt; [&quot;kumquat salad&quot;, &quot;peach salad&quot;, &quot;orange salad&quot;]</span>
+<span class="lineno">3</span> <span class="gp">irb(main):010:0&gt; </span><span class="n">fruit</span><span class="o">.</span><span class="n">reverse</span>
+<span class="lineno">4</span> <span class="go">=&gt; [&quot;orange salad&quot;, &quot;peach salad&quot;, &quot;kumquat salad&quot;]</span>
+<span class="lineno">5</span> <span class="gp">irb(main):011:0&gt; </span><span class="n">fruit</span>
+<span class="lineno">6</span> <span class="go">=&gt; [&quot;kumquat salad&quot;, &quot;peach salad&quot;, &quot;orange salad&quot;]</span>
+</code></pre></div>
+
+<h4>One Last Tip</h4>
+
+<p>What do you do if you want to get the last element in an array?  Easy:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):011:0&gt; </span><span class="n">fruit</span>
+<span class="lineno">2</span> <span class="go">=&gt; [&quot;kumquat salad&quot;, &quot;peach salad&quot;, &quot;orange salad&quot;]</span>
+<span class="lineno">3</span> <span class="gp">irb(main):012:0&gt; </span><span class="n">fruit</span><span class="o">[-</span><span class="mi">1</span><span class="o">]</span>
+<span class="lineno">4</span> <span class="go">=&gt; &quot;orange salad&quot;</span>
+</code></pre></div>
+
+<h3><em>What Can I Do With It?</em></h3>
+
+<p>Store data that you receive as inputs. Let&#39;s use this script for, example:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="lineno"> 1</span> <span class="nb">puts</span> <span class="s2">&quot;What is your favorite fruit?&quot;</span>
+<span class="lineno"> 2</span> <span class="n">fruit</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+<span class="lineno"> 3</span> <span class="n">grocery_list</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="lineno"> 4</span> <span class="n">grocery_list</span> <span class="o">&lt;&lt;</span> <span class="n">fruit</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="nb">puts</span> <span class="s2">&quot;What is your favorite veggie?&quot;</span>
+<span class="lineno"> 7</span> <span class="n">veggie</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+<span class="lineno"> 8</span> <span class="n">grocery_list</span> <span class="o">&lt;&lt;</span> <span class="n">veggie</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span> <span class="nb">puts</span> <span class="s2">&quot;Your Grocery List:&quot;</span>
+<span class="lineno">11</span> <span class="nb">puts</span> <span class="s2">&quot;==================&quot;</span>
+<span class="lineno">12</span> <span class="nb">puts</span> <span class="n">grocery_list</span>
+<span class="lineno">13</span> 
+<span class="lineno">14</span> <span class="nb">print</span> <span class="n">grocery_list</span>
+</code></pre></div>
+
+<p>Which gives us the following output (with my inputs given to the questions):</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="go">What is your favorite fruit?</span>
+<span class="lineno">2</span> <span class="go">Melon</span>
+<span class="lineno">3</span> <span class="go">What is your favorite veggie?</span>
+<span class="lineno">4</span> <span class="go">Cauliflower</span>
+<span class="lineno">5</span> <span class="go">Your Grocery List:</span>
+<span class="lineno">6</span> <span class="go">==================</span>
+<span class="lineno">7</span> <span class="go">Melon</span>
+<span class="lineno">8</span> <span class="go">Cauliflower</span>
+<span class="lineno">9</span> <span class="go">[&quot;Melon&quot;, &quot;Cauliflower&quot;]=&gt; true</span>
+</code></pre></div>
+
+<p>So what did I do here?  First, I had it put the text of the question [puts &quot;What is your favorite fruit?&quot;].  Then I had it allow for the user to input their answer whose content was saved in a variable [fruit = gets.chomp].  The variable&#39;s contents are then inserted into an array as an element.  I do the same again for the veggie question, but assign the content to a variable named veggie before assigning it to the array.  </p>
+
+<p>Lastly, I print the list (with some really underwhelming styling) and then print it out so you can see the array and return. </p>
+
+<p>Refactoring question: Can you think of a way that we could trim <em>two</em> lines of code from this?  How big of an improvement did or did it not make?</p>
+
+<h3><em>Why Do I Care?</em></h3>
+
+<p>Arrays are one of the easiest data storage methods available and they are found across a lot of different programming languages.  </p>
+
+<h2>Exercise</h2>
+
+<p>Make a list of your favorite shows with their times, using arrays.</p>
+
+<h2>Happiness Checkpoint</h2>
+
+<p>Be prepared to demonstrate your code to the class.  </p>
+
+<h2>Project Guidelines</h2>
+
+<p>Using arrays and inputs, store data on crimes that have been committed.  </p>
+
+<h2>Solve</h2>
+
+<p>When finished, flag down an instructor.</p>
+
+<h2>Extensions</h2>
+
+<p>Add an input option in your program that allows you to change an item in the blotter.</p>
+
+<h2>Push Instructions</h2>
+
+<p>Create a repo and push to Github.  You&#39;ll be using this tomorrow.</p>
+
+<h2>Further Readings</h2>
+
+<ul>
+<li><a href="http://www.ruby-doc.org/core-2.1.0/Array.html">Ruby Documentation on Arrays</a></li>
+<li><a href="http://zetcode.com/lang/rubytutorial/arrays/">Arrays in Ruby</a></li>
+<li><a href="http://www.tutorialspoint.com/ruby/ruby_arrays.htm">Ruby Arrays</a></li>
+</ul>
+
+<h2>Week&#39;s Badges</h2>
+
+<p>This week, the following badges are up for grabs:</p>
+
+<ul>
+<li></li>
+</ul>
+
+<p>Let your instructor know at lunch if you would like to earn one of these badges.</p>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Github Repo:<br />
+                My Twitter:<br />
+                
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/RealTschoegl/opensourcebootcamp">github.com/RealTschoegl/opensourcebootcamp</a><br />
+                <a href="https://twitter.com/RealTschoegl">twitter.com/RealTschoegl</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Week 1 : Lesson 3 : Github</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Open Source Ruby on Rails Course</a></h1>
+            <a class="extra" href="/">lessons</a>
+            <a class="extra" href="/mini-lessons">mini-lessons</a>
+            <a class="extra" href="/prework">prework</a>
+            <a class="extra" href="/projects">projects</a>
+            <a class="extra" href="/resources">resources</a>
+            <a class="extra" href="/skills">skills</a>
+            <a class="extra" href="/style">style</a>
+            <a class="extra" href="/terminology">terminology</a>
+
+          </div>
+
+          <h2>Week 1 : Lesson 3 : Github</h2>
+<p class="meta">04 Mar 2014</p>
+
+==========================================
+
+<div class="post">
+<h2>Review</h2>
+
+<p>Review from <a href="/lesson/2014/03/03/lesson-the-terminal.html">Week 1 : Lesson 2 : The Terminal</a>.  One (or more) pair will rehash the previous session&#39;s lesson by teaching the basic learnings to the group.  They will explain it to the others by drawing a diagram, using an analogy, telling a story or in some other way creatively communicating the idea without using code.</p>
+
+<h2>Today&#39;s Project<a name="todays-project"></a></h2>
+
+<p>Part of <a href="/project/2014/03/07/project-bos.html">Week 1 : Project 1 : BOS</a>.</p>
+
+<h2>Github</h2>
+
+<h3><em>What Is It?</em></h3>
+
+<p>Designed to help developers work together on open-source projects, Github has become the place where coders put their stuff. Although it can serve as a library, the real heart of the thing is as a way for multiple programmers to be able to work together without breaking their programs.  </p>
+
+<p>Sometimes you will hear Github described as a VCS or Version Control System.  The biggest problem with having multiple coders working on a project is that they are all making changes to a code base that is itself changing.  These shifting sands would be impossible to navigate unless there was a way to stop that at certain points and get everyone on the same page. </p>
+
+<h3><em>How Does It Work?</em></h3>
+
+<p>So this is the best way to understand how the process flow works: imagine a supermarket.</p>
+
+<p>First, you grab a shopping cart.  Then you grab things off the shelf or out of a freezer, and add it to your shopping cart.  You have decided to go with your friend.  To make the task easier, you have sent them off to pick up dairy products.  They grab a small basket and run off to get that stuff.  Eventually they come back and you take a look at what they brought.  If the stuff they have is what you wanted and not anything you have already got, they put it in there.  When you&#39;ve gotten what you want, you head to the cashier.  Once you have finished paying, the stuff is yours.  You go home and put it in your pantry/cupboard/fridge.  </p>
+
+<p>This is how git works.  Your shopping cart is your local repository.  Adding an item to the cart is like adding an item to the repository.  When you send your friend off to get something, it is like creating a branch.  When they get back, it is like merging the branch.  When you checkout, that is similar to committing your changes.  And putting it in your cupboard is like pushing it to the remote repo.</p>
+
+<h3><em>What Can I Do With It?</em></h3>
+
+<p><strong>git init</strong>  [Initializes a git repository – creates the initial ‘.git’ directory in a new or in an existing project.]
+<strong>git clone</strong> [Makes a Git repository copy from a remote source. Also adds the original location as a remote so you can fetch from it again and push to it if you have permissions.]
+<strong>git add</strong> [Adds files changes in your working directory to your index.]
+<strong>git status</strong> [Shows you the status of files in the index versus the working directory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), and staged (added to your index and ready for committing).]
+<strong>git diff</strong> [Generates patch files or statistics of differences between paths or files in your git repository, or your index or your working directory]
+<strong>git checkout</strong> [Checks out a different branch – switches branches by updating the index, working tree, and HEAD to reflect the chosen branch.]
+<strong>git merge</strong> [Merges one or more branches into your current branch and automatically creates a new commit if there are no conflicts.]
+<strong>git rm</strong> [Removes files from your index and your working directory so they will not be tracked.]
+<strong>git commit</strong> [Takes all of the changes written in the index, creates a new commit object pointing to it and sets the branch to point to that new commit.]
+<strong>git log</strong> [Shows a listing of commits on a branch including the corresponding details.]
+<strong>git remote</strong> [Shows all the remote versions of your repository.]
+<strong>git push</strong> [Pushes all the modified local objects to the remote repository and advances its branches.]</p>
+
+<p>Let&#39;s take a few of these for a whirl.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus  git init
+Initialized empty Git repository in /Users/matthewtschoegl/Code/Githippopotamus/.git/
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> 
+</code></pre></div>
+<p>So here I have initialized a Git repository.  If we look into the file, here&#39;s what we&#39;ll see:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ls -a
+.    ..   .git
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ls
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> 
+</code></pre></div>
+<p>So there is a git file that is tracking our changes and what our repository does and nothing else.  Let&#39;s change that and add a file.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> touch index.html
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ✗ git status
+<span class="c"># On branch master</span>
+<span class="c">#</span>
+<span class="c"># Initial commit</span>
+<span class="c">#</span>
+<span class="c"># Untracked files:</span>
+<span class="c">#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)</span>
+<span class="c">#</span>
+<span class="c">#   index.html</span>
+nothing added to commit but untracked files present <span class="o">(</span>use <span class="s2">&quot;git add&quot;</span> to track<span class="o">)</span>
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ✗ ls
+index.html
+</code></pre></div>
+<p>So here we created a file, index.html, and we can see at the bottom that it has indeed been created.  What is the rest of the message telling us?  It&#39;s saying that we have an untracked file.  An untracked file is one that git does not currently know about.  To use our earlier analogy, it is something that we are holding in our hand, but have not put in our shopping cart.  To put it in our shopping cart, we have to add it. </p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ✗ git add index.html
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ✗ git status
+<span class="c"># On branch master</span>
+<span class="c">#</span>
+<span class="c"># Initial commit</span>
+<span class="c">#</span>
+<span class="c"># Changes to be committed:</span>
+<span class="c">#   (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)</span>
+<span class="c">#</span>
+<span class="c">#   new file:   index.html</span>
+<span class="c">#</span>
+</code></pre></div>
+<p>Now it&#39;s been added to git.  Let&#39;s head to checkout now - i.e. commit our code.  </p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ✗ git commit -m <span class="s2">&quot;Added an index.html file.&quot;</span>
+<span class="o">[</span>master <span class="o">(</span>root-commit<span class="o">)</span> 1f02005<span class="o">]</span> Added an index.html file.
+ 1 file changed, 0 insertions<span class="o">(</span>+<span class="o">)</span>, 0 deletions<span class="o">(</span>-<span class="o">)</span>
+ create mode 100644 index.html
+</code></pre></div>
+<p>Here we committed the code and included a message.  The message is important, as it tells the other people who are working on the code (including your future self) what this code that you committed actually did.  </p>
+
+<p>But this repo is only found locally and only works if someone is using the same file directory as me.  If we want to use Github and have a code repository which we can all use and which is hosted in the cloud, there are a few more steps.  Let&#39;s give that a try now.</p>
+
+<p>First, you have to create a repository in your Github account (name it, describe it, and give it a README):   </p>
+
+<p><img src="http://realtschoegl.github.io/devchamps/images/githubrepo1.png" alt=""></p>
+
+<p>Then it takes you to this screen. </p>
+
+<p><img src="http://realtschoegl.github.io/devchamps/images/githubrepo2.png" alt=""></p>
+
+<p>Here you have two options.  The second is to simply push the repo that you configured locally to the repo using those two commands.  It&#39;s that easy!  The first is slightly more complicated.  </p>
+
+<p>What it has you do is to:</p>
+
+<ol>
+<li>Create a README file (totally optional, but always recommended) locally</li>
+<li>Initialize a local git repo </li>
+<li>Add your README</li>
+<li>Commit the README you just made</li>
+<li>Add the remote - this is to tell your local repo what cloud repo you are going to be pushing your code to.</li>
+<li>Push.</li>
+</ol>
+
+<p>And that&#39;s it.  Now you have both a local repo and a remote repo.  When you want to get the latest version of that codebase, you use the command <strong>git pull</strong> to update your local repo. If you don&#39;t have a local repo and a repo already exists online, you can make it even easier on yourself by using the <strong>git clone</strong> command along with the location of the remote repo (in the second picture that can be found in the Quick Setup section text box). </p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Code  git clone https://github.com/RealTschoegl/Githippopotamus.git
+</code></pre></div>
+<p>Versioning doesn&#39;t only exist so that you and your coworkers can each work on the same codebase without sabotaging each others&#39; work.  It also exists so that you can experiment locally with your own codebase, but without having to worry about compromising your codebase.  </p>
+
+<p>How does it do this?  Through the use of branches.  A branch is like a temporary version of your codebase where you can make changes (this is the friend&#39;s shopping basket in the grand analogy).  Eventually it is intended to be merged with the major codebase, but that is not always the case (think of your friend paying for what they have in their codebase separately).</p>
+
+<p>First, create a branch:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> git checkout -b basket
+Switched to a new branch <span class="s1">&#39;basket&#39;</span>
+➜  Githippopotamus git:<span class="o">(</span>basket<span class="o">)</span> 
+</code></pre></div>
+<p>As you can see from the command line we are now in a different branch.  I am going to now create another file, add that to the git repo, and commit the change (normal git procedures apply in a branch as well).  </p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>basket<span class="o">)</span> touch style.css
+➜  Githippopotamus git:<span class="o">(</span>basket<span class="o">)</span> ✗ ls
+images     index.html style.css
+➜  Githippopotamus git:<span class="o">(</span>basket<span class="o">)</span> ✗ git add .
+➜  Githippopotamus git:<span class="o">(</span>basket<span class="o">)</span> ✗ git status
+<span class="c"># On branch basket</span>
+<span class="c"># Changes to be committed:</span>
+<span class="c">#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span>
+<span class="c">#</span>
+<span class="c">#   new file:   style.css</span>
+<span class="c">#</span>
+➜  Githippopotamus git:<span class="o">(</span>basket<span class="o">)</span> ✗ git commit -m <span class="s2">&quot;Added a style.css file.&quot;</span>
+<span class="o">[</span>basket 6883b15<span class="o">]</span> Added a style.css file.
+ 1 file changed, 0 insertions<span class="o">(</span>+<span class="o">)</span>, 0 deletions<span class="o">(</span>-<span class="o">)</span>
+ create mode 100644 style.css
+</code></pre></div>
+<p>Now let&#39;s say we have finished making our changes and we are happy with them.  First, we switch back to the master.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>basket<span class="o">)</span> git checkout master
+Switched to branch <span class="s1">&#39;master&#39;</span>
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ls
+images     index.html
+</code></pre></div>
+<p>Notice that the style.css file that we created is not there.  No problem!  Now we just merge the changes from our branch into our master so we can include all of that good stuff.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> git merge basket
+Updating 5192834..6883b15
+Fast-forward
+ style.css <span class="p">|</span> 0
+ 1 file changed, 0 insertions<span class="o">(</span>+<span class="o">)</span>, 0 deletions<span class="o">(</span>-<span class="o">)</span>
+ create mode 100644 style.css
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ls
+images     index.html style.css
+</code></pre></div>
+<p>And there it is - our change has been included.  This all seems pretty easy and it certainly can be.  The hard part comes with remembering to execute each step at the proper time and in the proper way.  Much of the complaints you hear from developers about git has to do with the difficulty of undoing mistakes that have been made.</p>
+
+<p>The easiest way to avoid these frustrations is to know what your current git situation is and what you therefore have to do.  If at any time you want to check what is going on with your git, there are three commands you can use.  </p>
+
+<p><strong>Git diff</strong> will show you what exact lines of code have changed since your last commit.  Here I added some html tags to an index.html file:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">diff --git a/index.html b/index.html
+index e69de29..97645c2 100644
+--- a/index.html
++++ b/index.html
+@@ -0,0 +1,4 @@
++&lt;head&gt;
++&lt;/head&gt;
++&lt;body&gt;
++&lt;/body&gt;
+<span class="o">(</span>END<span class="o">)</span> 
+</code></pre></div>
+<p><strong>Git status</strong> shows what files have changed since my last commit.  It is less informative than <strong>git diff</strong>, but much easier to read and therefore more frequently used:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash"><span class="c"># On branch master</span>
+<span class="c"># Changes not staged for commit:</span>
+<span class="c">#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span>
+<span class="c">#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span>
+<span class="c">#</span>
+<span class="c">#   modified:   index.html</span>
+<span class="c">#</span>
+no changes added to commit <span class="o">(</span>use <span class="s2">&quot;git add&quot;</span> and/or <span class="s2">&quot;git commit -a&quot;</span><span class="o">)</span>
+</code></pre></div>
+<p>And if you want to know what commit it is that your current work is being compared against,** git log** will show you a list of previous commits:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">commit 1f0200507d6c8d085f4faecb79284c5b693d1726
+Author: RealTschoegl &lt;Matt.Tschoegl@gmail.com&gt;
+Date:   Tue Jan 28 01:10:07 2014 -0600
+
+    Added an index.html file.
+<span class="o">(</span>END<span class="o">)</span>
+</code></pre></div>
+<h3><em>Why Do I Care?</em></h3>
+
+<p>You&#39;re going to be doing this a lot.  </p>
+
+<h2>Exercise</h2>
+
+<p>1) Create a git repo locally.  Add a file to that repo.  Commit the changes. </p>
+
+<p>2) Create a repo on Git.  Clone that repo down.  Add a file to that repo.  Commit the changes.</p>
+
+<h2>Happiness Checkpoint</h2>
+
+<p>Did you do both of the above successfully?</p>
+
+<h2>Project Guidelines</h2>
+
+<p>Remember the file from yesterday?  Commit that to a Github repository.  </p>
+
+<h2>Solve</h2>
+
+<p>Flag an instructor when you are done.  Be prepared to tell them what you did and how you did it (process is as important as result in this exercise).  </p>
+
+<h2>Extensions</h2>
+
+<p>Figure out how to go back to a previous commit.</p>
+
+<h2>Push Instructions</h2>
+
+<p>Kinda the project above.</p>
+
+<h2>Further Readings</h2>
+
+<ul>
+<li><a href="http://www.ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></li>
+<li><a href="http://try.github.io/levels/1/challenges/1">&quot;Try Git&quot; Tutorial</a></li>
+<li><a href="https://www.codeschool.com/courses/git-real">&quot;Git Real 1&quot; Tutorial</a></li>
+<li><a href="https://www.codeschool.com/courses/git-real-2">&quot;Git Real 2&quot; Tutorial</a></li>
+</ul>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Github Repo:<br />
+                My Twitter:<br />
+                
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/RealTschoegl/opensourcebootcamp">github.com/RealTschoegl/opensourcebootcamp</a><br />
+                <a href="https://twitter.com/RealTschoegl">twitter.com/RealTschoegl</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Week 1 : Lesson 4 : Heroku</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Open Source Ruby on Rails Course</a></h1>
+            <a class="extra" href="/">lessons</a>
+            <a class="extra" href="/mini-lessons">mini-lessons</a>
+            <a class="extra" href="/prework">prework</a>
+            <a class="extra" href="/projects">projects</a>
+            <a class="extra" href="/resources">resources</a>
+            <a class="extra" href="/skills">skills</a>
+            <a class="extra" href="/style">style</a>
+            <a class="extra" href="/terminology">terminology</a>
+
+          </div>
+
+          <h2>Week 1 : Lesson 4 : Heroku</h2>
+<p class="meta">04 Mar 2014</p>
+
+==========================================
+
+<div class="post">
+<h2>Review</h2>
+
+<p>Review from <a href="/lesson/2014/03/04/lesson-github.html">Week 1 : Lesson 3 : Github</a>.  One (or more) pair will rehash the previous session&#39;s lesson by teaching the basic learnings to the group.  They will explain it to the others by drawing a diagram, using an analogy, telling a story or in some other way creatively communicating the idea without using code.</p>
+
+<h2>Today&#39;s Project<a name="todays-project"></a></h2>
+
+<p>Part of <a href="/project/2014/03/07/project-bos.html">Week 1 : Project 1 : BOS</a>.</p>
+
+<h2>Heroku</h2>
+
+<h3><em>What Is It?</em></h3>
+
+<p>Once you have made something, you want other people to be able to see and use it.  This means getting it to a server online as opposed to your own local server.  Heroku is a service that uses git to make it a cinch to get your local project online.  Using the command line, you upload your code to their file.  Then it fires up a server and database on your behalf. And for free! </p>
+
+<p>It really falls under the category of a managed hosting solution.  You don&#39;t have unlimited access to the server and it only really supports some languages/platforms/frameworks/etc.   But what it does really well, and was in fact designed to, was to work with Ruby on Rails and other Ruby-based servers. </p>
+
+<h3><em>How Does It Work?</em></h3>
+
+<p>So let&#39;s say that you have an app that you want to push to production (production means &quot;live&quot;, weirdly) - how do you go about getting it up on Heroku?</p>
+
+<p>Well first, you have to have a git repository with a commit already performed.  Heroku finds it really hard to launch apps when you don&#39;t have any code to push :/  So the initial step is to have code that you are ready to push.  In this case, we are going to create a basic rails app in one line of code.  </p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ✗ rails new blog
+      create 
+      <span class="o">(</span> ... whole bunch of code<span class="o">)</span>
+Your bundle is <span class="nb">complete</span>!
+Use <span class="sb">`</span>bundle show <span class="o">[</span>gemname<span class="o">]</span><span class="sb">`</span> to see where a bundled gem is installed.
+</code></pre></div>
+<p>We have an app!  Let&#39;s commit this.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ✗ git add .
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ✗ git status
+<span class="c"># On branch master</span>
+<span class="c"># Changes to be committed:</span>
+<span class="c">#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span>
+<span class="c">#</span>
+<span class="c">#   new file:   blog/.gitignore</span>
+<span class="o">(</span>.... whole bunch of code<span class="o">)</span>
+➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> ✗ git commit -m <span class="s2">&quot;Launching test app.&quot;</span>
+<span class="o">[</span>master 3de6a50<span class="o">]</span> Launching <span class="nb">test </span>app.
+<span class="o">(</span>.... whole bunch of code<span class="o">)</span>
+</code></pre></div>
+<p>Now, you are ready to initialize some Heroku. Let&#39;s use the Githippopotamus repo from a previous lesson and push that to Heroku. </p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> heroku create
+Creating vast-stream-4070... <span class="k">done</span>, stack is cedar
+http://vast-stream-4070.herokuapp.com/ <span class="p">|</span> git@heroku.com:vast-stream-4070.git
+</code></pre></div>
+<p>The heroku create command creates a new application on Heroku – along with a git remote that must be used to receive your application source.</p>
+
+<p>And let&#39;s verify that that remote exists.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> git remote -v
+heroku  git@heroku.com:secure-lake-7773.git <span class="o">(</span>fetch<span class="o">)</span>
+heroku  git@heroku.com:secure-lake-7773.git <span class="o">(</span>push<span class="o">)</span>
+</code></pre></div>
+<p>Then you push.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Githippopotamus git:<span class="o">(</span>master<span class="o">)</span> git push heroku master
+</code></pre></div>
+<p>You&#39;ll see something like this.  </p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  blog git:<span class="o">(</span>master<span class="o">)</span> git push heroku master
+Initializing repository, <span class="k">done</span>.
+Counting objects: 63, <span class="k">done</span>.
+Delta compression using up to 8 threads.
+Compressing objects: 100% <span class="o">(</span>49/49<span class="o">)</span>, <span class="k">done</span>.
+Writing objects: 100% <span class="o">(</span>63/63<span class="o">)</span>, 25.94 KiB <span class="p">|</span> 0 bytes/s, <span class="k">done</span>.
+Total 63 <span class="o">(</span>delta 2<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
+
+-----&gt; Launching... <span class="k">done</span>, v4
+       http://secure-lake-7773.herokuapp.com deployed to Heroku
+</code></pre></div>
+<p>Now all you have to do is to run the following commands.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  blog git:<span class="o">(</span>master<span class="o">)</span> heroku run rake db:migrate
+</code></pre></div>
+<p>This will migrate your app&#39;s database. And...</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  blog git:<span class="o">(</span>master<span class="o">)</span> heroku restart
+</code></pre></div>
+<p>This isn&#39;t strictly speaking necessary, but it&#39;s a good habit to get into.  When you restart Heroku, the changes you have made come into effect.  I have made the mistake inthe past of wondering why my changes didn&#39;t take, only to realize that I never restarted it.</p>
+
+<p>And finally.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  blog git:<span class="o">(</span>master<span class="o">)</span> heroku open
+</code></pre></div>
+<p>Which will open your application in a new window.</p>
+
+<p>One last thing...Rails out of the box uses SQLite for a database.  Heroku only supports Postgres.  Right now, that doesn&#39;t mean all that much to you, but in the future it will.  That does mean, though, in the present, that you have to make one change to any normal rails app.  Change the following in the Gemfile:</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">gem <span class="s1">&#39;sqlite3&#39;</span>
+</code></pre></div>
+<p>to</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">group :development <span class="k">do</span>
+<span class="k">  </span>gem <span class="s1">&#39;sqlite3&#39;</span>
+end
+group :production <span class="k">do</span>
+<span class="k">  </span>gem <span class="s1">&#39;pg&#39;</span>
+end
+</code></pre></div>
+<p>Then run </p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">bundle install
+</code></pre></div>
+<h3><em>What Can I Do With It?</em></h3>
+
+<p>Launch apps.</p>
+
+<h3><em>Why Do I Care?</em></h3>
+
+<p>Although there are other options for hosting, this is the only one which is completely free and super user-friendly.  Well, maybe not completely free...When you want it to do pretty much anything extra, it costs you.  A lot.  For our purposes right now, and for most of the apps you will make in the near future, that makes it a great solution.  Down the line, as you create apps with greater demands, you might find that other hosting solutions begin to make more sense.  </p>
+
+<h2>Exercise</h2>
+
+<p>Launch this <a href="https://github.com/railstutorial/sample_app">sample app</a> on your own Github account. </p>
+
+<h2>Happiness Checkpoint</h2>
+
+<p>Show the instructor your functioning rails app on Heroku.  Alternatively, flag an instructor so we can see </p>
+
+<h2>Project Guidelines</h2>
+
+<p>Should probably push an existing app or two.</p>
+
+<h2>Solve</h2>
+
+<p>Is it working?</p>
+
+<h2>Extensions</h2>
+
+<p>Look at the some of the <a href="https://addons.heroku.com/">add-on products</a> they offer.  Research what a couple of those are and what they do.</p>
+
+<h2>Push Instructions</h2>
+
+<p>I mean, the whole thing is kind of a push instruction.</p>
+
+<h2>Further Readings</h2>
+
+<ul>
+<li><a href="https://www.codeschool.com/code_tv/heroku">What Is Heroku: Video Guide</a></li>
+<li><a href="https://devcenter.heroku.com/articles/git">Deploying with Git</a></li>
+<li><a href="https://devcenter.heroku.com/articles/getting-started-with-rails4">Getting Started with Rails 4.x</a></li>
+</ul>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Github Repo:<br />
+                My Twitter:<br />
+                
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/RealTschoegl/opensourcebootcamp">github.com/RealTschoegl/opensourcebootcamp</a><br />
+                <a href="https://twitter.com/RealTschoegl">twitter.com/RealTschoegl</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

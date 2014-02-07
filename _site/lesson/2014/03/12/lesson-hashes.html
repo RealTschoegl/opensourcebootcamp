@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Week 2 : Lesson 3 : Hashes</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Open Source Ruby on Rails Course</a></h1>
+            <a class="extra" href="/">lessons</a>
+            <a class="extra" href="/mini-lessons">mini-lessons</a>
+            <a class="extra" href="/prework">prework</a>
+            <a class="extra" href="/projects">projects</a>
+            <a class="extra" href="/resources">resources</a>
+            <a class="extra" href="/skills">skills</a>
+            <a class="extra" href="/style">style</a>
+            <a class="extra" href="/terminology">terminology</a>
+
+          </div>
+
+          <h2>Week 2 : Lesson 3 : Hashes</h2>
+<p class="meta">12 Mar 2014</p>
+
+==========================================
+
+<div class="post">
+<h2>Review</h2>
+
+<p>Review from <a href="/lesson/2014/03/11/lesson-methods.html">Week 2 : Lesson 2 : Methods</a>.  One (or more) pair will rehash the previous session&#39;s lesson by teaching the basic learnings to the group.  They will explain it to the others by drawing a diagram, using an analogy, telling a story or in some other way creatively communicating the idea without using code.</p>
+
+<h2>Today&#39;s Project<a name="todays-project"></a></h2>
+
+<p>Part of <a href="/project/2014/03/14/project-movie-directory.html">Week 2 : Project 2 : Movie Directory</a>.</p>
+
+<h2>Hashes</h2>
+
+<h3><em>What Is It?</em></h3>
+
+<p>Hashes are the most common data storage unit you&#39;re going to see.  Even when you aren&#39;t using hashes, you&#39;re probably using a type of data storage that looks an awful lot like a hash.  </p>
+
+<h3><em>How Does It Work?</em></h3>
+
+<p>A hash is a data storage unit that is composed of what are called &quot;keys&quot; and &quot;values&quot;.  Each key is connected to value.  Unlike an array, there is no order in which the key-value pair is added into hash, nor can the information be extracted by knowing the order in which the key-value pair was added.  If you know the key, you can find the value.  If you add a key, you also have to add a value.</p>
+
+<p>So first, how do we create a hash? One option:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):001:0&gt; </span><span class="n">fruit</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span>
+<span class="lineno">2</span> <span class="go">=&gt; {}</span>
+<span class="lineno">3</span> <span class="gp">irb(main):002:0&gt; </span><span class="n">fruit</span>
+<span class="lineno">4</span> <span class="go">=&gt; {}</span>
+</code></pre></div>
+
+<p>Alternatively, you can just make it equal to the curly brackets:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):001:0&gt; </span><span class="n">fruit</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno">2</span> <span class="go">=&gt; {}</span>
+<span class="lineno">3</span> <span class="gp">irb(main):002:0&gt; </span><span class="n">fruit</span>
+<span class="lineno">4</span> <span class="go">=&gt; {}</span>
+</code></pre></div>
+
+<p>What can be the key? Anything!  Here are some examples:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno"> 1</span> <span class="gp">irb(main):006:0&gt; </span><span class="n">grocery_list</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno"> 2</span> <span class="go">=&gt; {}</span>
+<span class="lineno"> 3</span> <span class="gp">irb(main):007:0&gt; </span><span class="n">grocery_list</span><span class="o">[</span><span class="s2">&quot;fruit&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;mango&quot;</span>
+<span class="lineno"> 4</span> <span class="go">=&gt; &quot;mango&quot;</span>
+<span class="lineno"> 5</span> <span class="gp">irb(main):008:0&gt; </span><span class="n">grocery_list</span><span class="o">[</span><span class="ss">:fruit</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;apple&quot;</span>
+<span class="lineno"> 6</span> <span class="go">=&gt; &quot;apple&quot;</span>
+<span class="lineno"> 7</span> <span class="gp">irb(main):009:0&gt; </span><span class="n">grocery_list</span><span class="o">[[</span><span class="s2">&quot;fruit&quot;</span><span class="p">,</span><span class="s2">&quot;salad&quot;</span><span class="o">]]</span> <span class="o">=</span> <span class="s2">&quot;raspberry&quot;</span>
+<span class="lineno"> 8</span> <span class="go">=&gt; &quot;raspberry&quot;</span>
+<span class="lineno"> 9</span> <span class="gp">irb(main):010:0&gt; </span><span class="n">grocery_list</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;items&quot;</span>
+<span class="lineno">10</span> <span class="go">=&gt; &quot;items&quot;</span>
+<span class="lineno">11</span> <span class="gp">irb(main):011:0&gt; </span><span class="n">grocery_list</span><span class="o">[</span><span class="no">Object</span><span class="o">.</span><span class="n">new</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;Thing&quot;</span>
+<span class="lineno">12</span> <span class="go">=&gt; &quot;Thing&quot;</span>
+<span class="lineno">13</span> <span class="gp">irb(main):012:0&gt; </span><span class="n">grocery_list</span>
+<span class="lineno">14</span> <span class="go">=&gt; {&quot;fruit&quot;=&gt;&quot;mango&quot;, :fruit=&gt;&quot;apple&quot;, [&quot;fruit&quot;, &quot;salad&quot;]=&gt;&quot;raspberry&quot;, 1=&gt;&quot;items&quot;, #&lt;Object:0x007f8abd95ec10&gt;=&gt;&quot;Thing&quot;}</span>
+</code></pre></div>
+
+<p>You can even use variables as keys and values in a hash - or at least the values from the variables:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno"> 1</span> <span class="gp">irb(main):034:0&gt; </span><span class="n">your_hash</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno"> 2</span> <span class="go">=&gt; {}</span>
+<span class="lineno"> 3</span> <span class="gp">irb(main):035:0&gt; </span><span class="n">hash_key</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+<span class="lineno"> 4</span> <span class="go">S</span>
+<span class="lineno"> 5</span> <span class="go">=&gt; &quot;S&quot;</span>
+<span class="lineno"> 6</span> <span class="gp">irb(main):036:0&gt; </span><span class="n">hash_value</span> <span class="o">=</span> <span class="nb">gets</span><span class="o">.</span><span class="n">chomp</span>
+<span class="lineno"> 7</span> <span class="go">B</span>
+<span class="lineno"> 8</span> <span class="go">=&gt; &quot;B&quot;</span>
+<span class="lineno"> 9</span> <span class="gp">irb(main):037:0&gt; </span><span class="n">your_hash</span><span class="o">[</span><span class="n">hash_key</span><span class="o">]</span> <span class="o">=</span> <span class="n">hash_value</span>
+<span class="lineno">10</span> <span class="go">=&gt; &quot;B&quot;</span>
+<span class="lineno">11</span> <span class="gp">irb(main):038:0&gt; </span><span class="n">your_hash</span> 
+<span class="lineno">12</span> <span class="go">=&gt; {&quot;S&quot;=&gt;&quot;B&quot;}</span>
+</code></pre></div>
+
+<p>What can be the value?  Pretty much anything that can be the key.</p>
+
+<p>How do you add something to a hash?  One, you can add a value to hash on creation:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):001:0&gt; </span><span class="n">students</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;Thomas&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Robinson&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Craig&quot;</span> <span class="p">}</span>
+<span class="lineno">2</span> <span class="go">=&gt; {&quot;Thomas&quot;=&gt;&quot;John&quot;, &quot;Robinson&quot;=&gt;&quot;Craig&quot;}</span>
+<span class="lineno">3</span> <span class="gp">irb(main):002:0&gt; </span><span class="n">students</span>
+<span class="lineno">4</span> <span class="go">=&gt; {&quot;Thomas&quot;=&gt;&quot;John&quot;, &quot;Robinson&quot;=&gt;&quot;Craig&quot;}</span>
+</code></pre></div>
+
+<p>Once you have an existing hash, it is as easy as this:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):003:0&gt; </span><span class="n">students</span><span class="o">[</span><span class="s2">&quot;Simpson&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;Homer&quot;</span>
+<span class="lineno">2</span> <span class="go">=&gt; &quot;Homer&quot;</span>
+<span class="lineno">3</span> <span class="gp">irb(main):004:0&gt; </span><span class="n">students</span>
+<span class="lineno">4</span> <span class="go">=&gt; {&quot;Thomas&quot;=&gt;&quot;John&quot;, &quot;Robinson&quot;=&gt;&quot;Craig&quot;, &quot;Simpson&quot;=&gt;&quot;Homer&quot;}</span>
+</code></pre></div>
+
+<p>Alternatively:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):004:0&gt; </span><span class="n">students</span>
+<span class="lineno">2</span> <span class="go">=&gt; {&quot;Thomas&quot;=&gt;&quot;John&quot;, &quot;Robinson&quot;=&gt;&quot;Craig&quot;, &quot;Simpson&quot;=&gt;&quot;Homer&quot;}</span>
+<span class="lineno">3</span> <span class="gp">irb(main):005:0&gt; </span><span class="n">students</span><span class="o">.</span><span class="n">store</span><span class="p">(</span><span class="s2">&quot;Crusoe&quot;</span><span class="p">,</span> <span class="s2">&quot;Robinson&quot;</span><span class="p">)</span>
+<span class="lineno">4</span> <span class="go">=&gt; &quot;Robinson&quot;</span>
+<span class="lineno">5</span> <span class="gp">irb(main):006:0&gt; </span><span class="n">students</span>
+<span class="lineno">6</span> <span class="go">=&gt; {&quot;Thomas&quot;=&gt;&quot;John&quot;, &quot;Robinson&quot;=&gt;&quot;Craig&quot;, &quot;Simpson&quot;=&gt;&quot;Homer&quot;, &quot;Crusoe&quot;=&gt;&quot;Robinson&quot;}</span>
+</code></pre></div>
+
+<p>Or you can merge an existing hash with your new hash to add to it:</p>
+
+<div class="highlight"><pre><code class="irb"><span class="lineno">1</span> <span class="gp">irb(main):010:0&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Brewster&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;Punky&quot;</span><span class="p">}</span>
+<span class="lineno">2</span> <span class="go">=&gt; {&quot;Brewster&quot;=&gt;&quot;Punky&quot;}</span>
+<span class="lineno">3</span> <span class="gp">irb(main):011:0&gt; </span><span class="n">students</span><span class="o">.</span><span class="n">merge!</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="lineno">4</span> <span class="go">=&gt; {&quot;Thomas&quot;=&gt;&quot;John&quot;, &quot;Robinson&quot;=&gt;&quot;Craig&quot;, &quot;Simpson&quot;=&gt;&quot;Homer&quot;, &quot;Crusoe&quot;=&gt;&quot;Robinson&quot;, &quot;Brewster&quot;=&gt;&quot;Punky&quot;}</span>
+</code></pre></div>
+
+<p>What if I want to get information out of a hash? There are a number of methods to do so, but none of them that work sequentially as with an array. </p>
+
+<p>If you know the key, it&#39;s pretty easy:</p>
+
+<h3><em>What Can I Do With It?</em></h3>
+
+<h3><em>Why Do I Care?</em></h3>
+
+<h2>Exercise</h2>
+
+<h2>Happiness Checkpoint</h2>
+
+<h2>Project Guidelines</h2>
+
+<h2>Solve</h2>
+
+<h2>Extensions</h2>
+
+<h2>Push Instructions</h2>
+
+<h2>Further Readings</h2>
+
+<ul>
+<li><a href="http://ruby-doc.org/core-2.1.0/Hash.html">Ruby Documentation for Hashes</a></li>
+<li><a href="http://www.tutorialspoint.com/ruby/ruby_hashes.htm">Ruby Hashes</a></li>
+<li><a href="http://zetcode.com/lang/rubytutorial/hashes/">Hashes in Ruby</a></li>
+</ul>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Github Repo:<br />
+                My Twitter:<br />
+                
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/RealTschoegl/opensourcebootcamp">github.com/RealTschoegl/opensourcebootcamp</a><br />
+                <a href="https://twitter.com/RealTschoegl">twitter.com/RealTschoegl</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

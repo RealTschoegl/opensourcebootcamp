@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Week 1 : Lesson 2 : The Terminal</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Open Source Ruby on Rails Course</a></h1>
+            <a class="extra" href="/">lessons</a>
+            <a class="extra" href="/mini-lessons">mini-lessons</a>
+            <a class="extra" href="/prework">prework</a>
+            <a class="extra" href="/projects">projects</a>
+            <a class="extra" href="/resources">resources</a>
+            <a class="extra" href="/skills">skills</a>
+            <a class="extra" href="/style">style</a>
+            <a class="extra" href="/terminology">terminology</a>
+
+          </div>
+
+          <h2>Week 1 : Lesson 2 : The Terminal</h2>
+<p class="meta">03 Mar 2014</p>
+
+==========================================
+
+<div class="post">
+<h2>Review</h2>
+
+<p>Review from <a href="/lesson/2014/03/03/lesson-ice-breakers.html">Week 1 : Lesson 1 : Ice Breakers</a>.  One (or more) pair will rehash the previous session&#39;s lesson by teaching the basic learnings to the group.  They will explain it to the others by drawing a diagram, using an analogy, telling a story or in some other way creatively communicating the idea without using code.</p>
+
+<h2>Today&#39;s Project<a name="todays-project"></a></h2>
+
+<p>Part of <a href="/project/2014/03/07/project-bos.html">Week 1 : Project 1 : BOS</a>.</p>
+
+<h2>The Terminal</h2>
+
+<h3><em>What Is It?</em></h3>
+
+<p>The terminal is the means by which you can interact with your computer&#39;s files.  As a web developer, it is also how you will interact with the files on a web server (which is really just a computer that other people can also access). </p>
+
+<h3><em>How Does It Work?</em></h3>
+
+<p>By using commands.  By entering commands you can find files, make files, delete files, copy files, and a whole bunch else (much of which we will not cover here).  These are a few of the basics that you will need:</p>
+
+<ul>
+<li><strong>pwd</strong>                   [Print Working Directory]</li>
+<li><strong>ls</strong>                    [List]</li>
+<li><strong>ls</strong> -a                 [List all]</li>
+<li><strong>cd</strong>                    [Change Directory]</li>
+<li><strong>cd ..</strong>                 [Change Directory by moving up one folder]</li>
+<li><strong>mkdir</strong>                 [Create new folder]</li>
+<li><strong>mv</strong>                    [Move or rename files or directories]</li>
+<li><strong>cp</strong>                    [Copy one or more files to another location]</li>
+<li><strong>rm</strong>                    [Remove files]</li>
+<li><strong>rm -rf</strong>                [Force remove directories and their contents recursively]</li>
+</ul>
+
+<p>The easiest way to think about file directories, at least for me, is in terms of rooms in a huge house.  <strong>pwd</strong> tells you what room you are in. <strong>ls</strong> tells you what else is in the room.  <strong>ls -a</strong> tells you what is in the room, even if it is hidden (think of it as opening the cupboards).  <strong>cd</strong> is to enter another room.  <strong>cd -</strong> is to enter the previous room while <strong>cd ..</strong> is to go to the room which provides the entry to your current room. <strong>mkdir</strong> is to create a new room.  <strong>mv</strong> is to bring an object from one room to another room and <strong>cp</strong> is to copy it from one room to another (both can also be used for files, aka rooms, but that is a bit confusing in this analogy).  <strong>rm</strong> destroys something in a room, while <strong>rm -rf</strong> destroys a room and everything in it.  If that later one sounds especially scary, that is because it is. Although not as scary as *<em>rm * *</em> which is to delete everything.  Ask <a href="http://www.techdirt.com/articles/20120514/17243918918/how-toy-story-2-almost-got-deleted-except-that-one-person-made-home-backup.shtml">Pixar about that one</a>. </p>
+
+<h3><em>What Can I Do With It?</em></h3>
+
+<p>Let&#39;s run you through a couple of exercises.  First click on iTerm, which has been helpfully installed already on your computer.  This is what you will see:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  ~
+</code></pre></div>
+<p>Okay.  So...where are we?  Easy enough to find, simply type in this command:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  ~ pwd
+</code></pre></div>
+<p>and we get the following</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  ~ pwd
+/Users/matthewtschoegl
+</code></pre></div>
+<p>This is the directory we are currently sitting in.  So now we want to know what else is in this file.  So we type in the following:</p>
+
+<div class="highlight"><pre><code class="ksh">➜  ~ ls
+</code></pre></div>
+
+<p>and get ...</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  ~  ls
+Code      Desktop   Documents Downloads Dropbox   Library   Movies    Music
+Pictures  Public    SkyDrive  asciiart  bin       src       subl
+</code></pre></div>
+<p>These are all of the files that are in this file.  Let&#39;s say that we want to look in one of the files.  There are two ways to do that.  The first is simply to list the contents of that file, like so:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  ~ ls Code
+</code></pre></div>
+<p>The other is to actually enter the file and take a look around.  Let&#39;s do that:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  ~ cd Code
+</code></pre></div>
+<p>And now it changes to </p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  Code 
+</code></pre></div>
+<p>Our terminal helpfully tells us what file we are in.  It doesn&#39;t give the whole pathway, although it can be configured to do so.  Kind of a matter of personal preference.  </p>
+
+<p>Now that we are in the file, I want to see what is there.  What do we type? Of course</p>
+
+<div class="highlight"><pre><code class="ksh">➜  Code  ls
+DevChamps       GolaZone        HoffmannJozsef  RandomStuff     StockApp
+bedeadly        commitcoffee    maximum-awesome
+</code></pre></div>
+
+<p>Here we can see a bunch of files of various code projects that I have or am working on.  Cool.  Let&#39;s do some of the stuff mentioned above.  First we can create a new folder named Stuff.  </p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  Code mkdir Stuff
+➜  Code
+</code></pre></div>
+<p>Did anything happen?  Well, let&#39;s see if it&#39;s there:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  Code ls
+DevChamps       GolaZone        HoffmannJozsef  RandomStuff     StockApp        Stuff
+bedeadly        commitcoffee    maximum-awesome
+</code></pre></div>
+<p>It is!  Let&#39;s enter this folder.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  Code cd Stuff
+➜  Stuff
+</code></pre></div>
+<p>Again, we look around a little bit.</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  Stuff ls
+➜  Stuff
+</code></pre></div>
+<p>Nothing there.  Here is a helpful command if we want to create a file.  Let&#39;s make an index.html file, to start with (when we get more into html, you&#39;ll see why this file type is so important).</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">➜  Stuff touch index.html
+➜  Stuff ls
+➜  Stuff
+index.html
+</code></pre></div>
+<p>Now we are going to create another file in our folder.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Stuff  mkdir Cabinet
+➜  Stuff  ls
+Cabinet    index.html
+</code></pre></div>
+<p>And into that cabinet, let&#39;s copy the index file.  </p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Stuff  cp index.html Cabinet
+➜  Stuff  ls
+Cabinet    index.html
+➜  Stuff  ls Cabinet
+index.html
+</code></pre></div>
+<p>Now we want to create another file in the Cabinet.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Stuff  touch style.css
+➜  Stuff  ls
+Cabinet    index.html style.css
+</code></pre></div>
+<p>Dagnabit!  We didn&#39;t look at our file pathway beforehand and forgot to create the file in the right directory.  Let&#39;s move it to the right one.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Stuff  mv style.css Cabinet
+➜  Stuff  ls
+Cabinet    index.html
+➜  Stuff  ls Cabinet 
+index.html style.css
+</code></pre></div>
+<p>Now that I think about it, I don&#39;t really need that file at all.  Let&#39;s get rid of it.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Stuff  <span class="nb">cd </span>Cabinet
+➜  Cabinet  ls
+index.html style.css
+➜  Cabinet  rm style.css 
+➜  Cabinet  ls
+index.html
+</code></pre></div>
+<p>Finally, I want to get rid of the Cabinet and everything in it.</p>
+<div class="highlight"><pre><code class="bash language-bash" data-lang="bash">➜  Cabinet  <span class="nb">cd</span> ..
+➜  Stuff  ls
+Cabinet    index.html
+➜  Stuff  rm -rf Cabinet
+➜  Stuff  ls
+index.html
+</code></pre></div>
+<h3><em>Why Do I Care?</em></h3>
+
+<p>For a lot of experienced developers, pretty much everything they do is done in the terminal.  Creating servers, putting files on those servers, changing the files on those servers - all of it can be done fastest and easiest through the command line.  At this point, we will just be using it for basic file management, but as the course progresses, you will use it more and more.  </p>
+
+<h2>Exercise</h2>
+
+<p>Create a file structure for a year, with months, weeks, and days.  It does not have to be complete.  </p>
+
+<h2>Happiness Checkpoint</h2>
+
+<p>What does your structure look like?</p>
+
+<pre>
+.
+└── January
+    └── Week1
+        ├── Friday
+        ├── Monday
+        ├── Saturday
+        ├── Sunday
+        ├── Thursday
+        ├── Tuesday
+        └── Wednesday
+</pre>
+
+<h2>Project Guidelines</h2>
+
+<p>In your code folder, create a folder titled BOS.  Create a file called bos.rb.  </p>
+
+<h2>Solve</h2>
+
+<p>Flag an instructor when you are done.  </p>
+
+<h2>Extensions</h2>
+
+<p>Fool around with some of the other commands that are available to you <a href="http://ss64.com/bash/">listed here</a>.</p>
+
+<h2>Push Instructions</h2>
+
+<p>We&#39;ll get to this bit tomorrow.  </p>
+
+<h2>Further Readings</h2>
+
+<ul>
+<li><a href="http://ss64.com/bash/">List of Bash Commands</a></li>
+<li><a href="http://teamtreehouse.com/library/console-foundations-2">Treehouse: Console Foundations</a></li>
+<li><a href="http://cli.learncodethehardway.org/book/">The Command Line Crash Course</a></li>
+</ul>
+
+<h2>Week&#39;s Badges</h2>
+
+<p>This week, the following badges are up for grabs:</p>
+
+<ul>
+<li><strong>Teach One</strong> for <a href="http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-moodle.html">Moodle Blog</a> </li>
+<li><strong>Teach One</strong> for <a href="http://realtschoegl.github.io/devchamps/mini-lesson/2014/01/01/mini-ranges.html">Ranges</a></li>
+</ul>
+
+<p>Let your instructor know at lunch if you would like to earn one of these badges.</p>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Github Repo:<br />
+                My Twitter:<br />
+                
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/RealTschoegl/opensourcebootcamp">github.com/RealTschoegl/opensourcebootcamp</a><br />
+                <a href="https://twitter.com/RealTschoegl">twitter.com/RealTschoegl</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

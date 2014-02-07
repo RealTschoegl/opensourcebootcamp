@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Week 1 : Lesson 5 : Variables, Data Types, and Operators</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Open Source Ruby on Rails Course</a></h1>
+            <a class="extra" href="/">lessons</a>
+            <a class="extra" href="/mini-lessons">mini-lessons</a>
+            <a class="extra" href="/prework">prework</a>
+            <a class="extra" href="/projects">projects</a>
+            <a class="extra" href="/resources">resources</a>
+            <a class="extra" href="/skills">skills</a>
+            <a class="extra" href="/style">style</a>
+            <a class="extra" href="/terminology">terminology</a>
+
+          </div>
+
+          <h2>Week 1 : Lesson 5 : Variables, Data Types, and Operators</h2>
+<p class="meta">05 Mar 2014</p>
+
+==========================================
+
+<div class="post">
+<h2>Review</h2>
+
+<p>Review from <a href="/lesson/2014/03/04/lesson-heroku.html">Week 1 : Lesson 4 : Heroku</a>.  One (or more) pair will rehash the previous session&#39;s lesson by teaching the basic learnings to the group.  They will explain it to the others by drawing a diagram, using an analogy, telling a story or in some other way creatively communicating the idea without using code.</p>
+
+<h2>Today&#39;s Project<a name="todays-project"></a></h2>
+
+<p>Part of <a href="/project/2014/03/07/project-bos.html">Week 1 : Project 1 : BOS</a>.</p>
+
+<h2>Variables, Data Types, and Operators</h2>
+
+<h3><em>What Is It?</em></h3>
+
+<p>One of the things that you will hear a lot about Ruby is how everything is an object.  It will take a little while before that really sinks in.  First, we&#39;re going to take a little bit of time to learn how to create an object, know what the object is, and then how to change it.  </p>
+
+<p>A variable is ...</p>
+
+<p>A data type is ...</p>
+
+<p>Operators are ...</p>
+
+<h3><em>How Does It Work?</em></h3>
+
+<p>Assigning a variable just means that you make the thing on the left equal to the thing on the right.  So, in the example below:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">apple</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div>
+<p><em>In your Ruby program, any time the variable <strong>apple</strong> is used, the program will treat it as if it is the value <strong>2</strong>.  Why bother?  Can&#39;t we just enter the value <strong>2</strong> and be done with it?  Yes!  Then why bother?</em></p>
+
+<p><em>Well, we are going to do things to this apple.  Awful things.  But that means that we need to make sure that each part of our applications knows what this value is. However we received that input, we are probably not going to want to just keep asking for that input again and again, right?</em></p>
+
+<p><em>Keep this in the back of your head as we proceed - often times we make things a little more complicated than they need to be in order to make them much simpler in the future.</em></p>
+
+<p>Assignment is like putting something in a bucket.  Except first you the tip the bucket over and then put something in it.  Every time.  For example: </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">orange</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">orange</span> 
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">orange</span> <span class="o">=</span> <span class="mi">4</span>
+ <span class="o">=&gt;</span> <span class="mi">4</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">004</span> <span class="o">&gt;</span> <span class="n">orange</span>
+ <span class="o">=&gt;</span> <span class="mi">4</span>
+</code></pre></div>
+<p>There are a few other assignment operators worth mentioning. If you have assigned a number </p>
+
+<p>Let&#39;s say that in the example above you had actually wanted to increase the value of orange by four, not reassign the value.  How could you do that?  Well, the easiest way is to incrememnt the value using: +=</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">006</span> <span class="o">&gt;</span> <span class="n">orange</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">007</span> <span class="o">&gt;</span> <span class="n">orange</span> 
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">00</span><span class="mi">8</span> <span class="o">&gt;</span> <span class="n">orange</span> <span class="o">+=</span> <span class="mi">4</span>
+ <span class="o">=&gt;</span> <span class="mi">6</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">00</span><span class="mi">9</span> <span class="o">&gt;</span> <span class="n">orange</span>
+ <span class="o">=&gt;</span> <span class="mi">6</span>
+</code></pre></div>
+<p>If you want to subtract from the value, that&#39;s not so hard either.  Use the decrement operator: -= </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">orange</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">=</span> <span class="mi">4</span>
+ <span class="o">=&gt;</span> <span class="mi">4</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">-=</span> <span class="n">orange</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+</code></pre></div>
+<p>Back to it...What is apple now?  It&#39;s an <strong>Integer</strong>.  Remember integers?  They&#39;re whole numbers.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">=</span> <span class="s2">&quot;Apple&quot;</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;Apple&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">004</span> <span class="o">&gt;</span> <span class="n">apple</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;Apple&quot;</span>
+</code></pre></div>
+<p>Does it have to be an integer if it&#39;s a number?  No, it can also be a <strong>Float</strong>.  </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">01</span><span class="mi">9</span> <span class="o">&gt;</span> <span class="n">quasimodo</span> <span class="o">=</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span>
+ <span class="o">=&gt;</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">020</span> <span class="o">&gt;</span> <span class="n">quasimodo</span>
+ <span class="o">=&gt;</span> <span class="mi">1</span><span class="o">.</span><span class="mi">5</span> 
+</code></pre></div>
+<p>What else can we do with apple?  Well, we can make it equal to a <strong>String</strong>.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">apple</span> <span class="o">=</span> <span class="s2">&quot;Apple&quot;</span>
+</code></pre></div>
+<p>And when we enter it into IRB, we get:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">=</span> <span class="s2">&quot;Apple&quot;</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;Apple&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">004</span> <span class="o">&gt;</span> <span class="n">apple</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;Apple&quot;</span>
+</code></pre></div>
+<p>What else can it be? It can be a <strong>Boolean</strong>! Isn&#39;t that cool!!  What&#39;s a Boolean ... A Boolean is a datatype which can only have two values: True or False.  </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">010</span> <span class="o">&gt;</span> <span class="n">platypus</span> <span class="o">=</span> <span class="kp">true</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">011</span> <span class="o">&gt;</span> <span class="n">platypus</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+</code></pre></div>
+<p>How do we check what type of value a variable is?  Well, everything in Ruby is an object and every object belongs to a class. So let&#39;s get its class.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">platypus</span> <span class="o">=</span> <span class="kp">true</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">platypus</span><span class="o">.</span><span class="n">class</span>
+ <span class="o">=&gt;</span> <span class="no">TrueClass</span> 
+</code></pre></div>
+<p>When we have assigned these various types of data, we can begin to perform operations on them.  Basically, having created an object, we can now do things with it. </p>
+
+<h3>Arithmetic Operators</h3>
+
+<p>These are about doing math on the object.  Below are some of the options:</p>
+
+<h4>Addition</h4>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">banana</span> <span class="o">=</span> <span class="mi">5</span>
+ <span class="o">=&gt;</span> <span class="mi">5</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">+</span> <span class="n">banana</span>
+ <span class="o">=&gt;</span> <span class="mi">7</span>
+</code></pre></div>
+<p>There is also a way that you can use addition plus assignment to change the value of the variable.  </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">apple</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">orange</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">apple</span> <span class="o">=</span> <span class="n">apple</span> <span class="o">+</span> <span class="n">orange</span>
+</code></pre></div>
+<h4>Subtraction</h4>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">banana</span> <span class="o">=</span> <span class="mi">5</span>
+ <span class="o">=&gt;</span> <span class="mi">5</span>
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">banana</span> <span class="o">-</span> <span class="n">apple</span>
+ <span class="o">=&gt;</span> <span class="mi">3</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">004</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">-</span> <span class="n">banana</span>
+ <span class="o">=&gt;</span> <span class="o">-</span><span class="mi">3</span> 
+</code></pre></div>
+<h4>Multiplication</h4>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">banana</span> <span class="o">=</span> <span class="mi">5</span>
+ <span class="o">=&gt;</span> <span class="mi">5</span>
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">*</span> <span class="n">banana</span>
+ <span class="o">=&gt;</span> <span class="mi">10</span> 
+</code></pre></div>
+<h4>Division</h4>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">banana</span> <span class="o">=</span> <span class="mi">5</span>
+ <span class="o">=&gt;</span> <span class="mi">5</span>
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">banana</span> <span class="o">/</span> <span class="n">apple</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span>
+</code></pre></div>
+<p>Wait, what?  Banana equals 5.  Apple equals 2.  I might not be a math whiz, but I know that equals 2.5?  Why is it giving me two?  </p>
+
+<p>Because banana is an integer and apple is an integer.  The returned value, therefore, can only be an integer.  And the integer value of 2.5 is 2.  Computers, amirite?   If you want it to return a float value, you need to make one or both of those values a float.  </p>
+
+<h4>Modulo</h4>
+
+<p>My favorite operator, the modulo divides the number on the left by the number on the right and returns the remainder.  This may not sound particularly useful.  Until you need to get an even or odd number.  </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">kumquat</span> <span class="o">=</span> <span class="mi">6</span>
+ <span class="o">=&gt;</span> <span class="mi">6</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">kumquat</span> <span class="o">%</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">0</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">kumquat</span> <span class="o">%</span> <span class="mi">4</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+</code></pre></div>
+<h4>Exponent</h4>
+
+<p>Take the value on the left to the value of the power on the right.   </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">004</span> <span class="o">&gt;</span> <span class="n">guava</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">005</span> <span class="o">&gt;</span> <span class="n">guava</span> <span class="o">**</span> <span class="mi">3</span>
+ <span class="o">=&gt;</span> <span class="mi">8</span> 
+</code></pre></div>
+<h3>Comparison Operators</h3>
+
+<p>These operators tell you how one value or variable compares to another value or variable.</p>
+
+<h4>==</h4>
+
+<p>Does the value on the left equal the value on the right?</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">006</span> <span class="o">&gt;</span> <span class="n">kiwi</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">007</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">=</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">2</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">00</span><span class="mi">8</span> <span class="o">&gt;</span> <span class="n">kiwi</span> <span class="o">==</span> <span class="n">apple</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+</code></pre></div>
+<h4>!=</h4>
+
+<p>Does the value on the <em>left</em> not equal the value on the right?</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">orange</span> <span class="o">=</span> <span class="mi">4</span><span class="o">.</span><span class="mi">50</span>
+ <span class="o">=&gt;</span> <span class="mi">4</span><span class="o">.</span><span class="mi">5</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">apricot</span> <span class="o">=</span> <span class="mi">5</span><span class="o">.</span><span class="mi">60</span>
+ <span class="o">=&gt;</span> <span class="mi">5</span><span class="o">.</span><span class="mi">6</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">orange</span> <span class="o">!=</span> <span class="n">apricot</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+</code></pre></div>
+<h4>&gt;, &gt;=, &lt;, &lt;=</h4>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">4</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">5</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="o">&lt;=</span> <span class="mi">5</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">004</span> <span class="o">&gt;</span> <span class="mi">4</span> <span class="o">&lt;</span> <span class="mi">5</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">005</span> <span class="o">&gt;</span> <span class="mi">7</span> <span class="o">&lt;</span> <span class="mi">6</span>
+ <span class="o">=&gt;</span> <span class="kp">false</span> 
+</code></pre></div>
+<h4>&lt;=&gt;</h4>
+
+<p>This operator might be a bit unusual, if not paradoxical, on first glance, but it shows up fairly frequent and can really come in handy.  Rather than returning a boolean value, this operand returns a numeric value that corresponds with the relationship between the left variable and the right one.  As so: </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">&lt;=&gt;</span> <span class="mi">3</span>
+ <span class="o">=&gt;</span> <span class="mi">0</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">&lt;=&gt;</span> <span class="mi">2</span>
+ <span class="o">=&gt;</span> <span class="mi">1</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="mi">3</span> <span class="o">&lt;=&gt;</span> <span class="mi">4</span>
+ <span class="o">=&gt;</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div>
+<h3><em>What Can I Do With It?</em></h3>
+
+<p>Try building some logic.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">005</span> <span class="o">&gt;</span> <span class="n">lunch</span> <span class="o">=</span> <span class="s2">&quot;sandwich&quot;</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;sandwich&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">006</span> <span class="o">&gt;</span> <span class="n">drink</span> <span class="o">=</span> <span class="s2">&quot;coke&quot;</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;coke&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">007</span> <span class="o">&gt;</span> <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;I had a &quot;</span> <span class="o">+</span> <span class="n">lunch</span> <span class="o">+</span> <span class="s2">&quot; and a &quot;</span> <span class="o">+</span>  <span class="n">drink</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;I had a sandwich and a coke&quot;</span>
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p247</span> <span class="p">:</span><span class="mo">00</span><span class="mi">8</span> <span class="o">&gt;</span> <span class="n">text</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;I had a sandwich and a coke&quot;</span>
+</code></pre></div>
+<h3>Logical Operators</h3>
+
+<p>These are basic logical building blocks.</p>
+
+<p><strong>&amp;&amp;</strong> - if both are true, then it returns true </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">first_answer</span> <span class="o">=</span> <span class="kp">true</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">second_answer</span> <span class="o">=</span> <span class="kp">false</span>
+ <span class="o">=&gt;</span> <span class="kp">false</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">first_answer</span> <span class="o">&amp;&amp;</span> <span class="n">second_answer</span>
+ <span class="o">=&gt;</span> <span class="kp">false</span> 
+</code></pre></div>
+<p><strong>||</strong>  - if either is true, then it returns true</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="n">first_answer</span> <span class="o">=</span> <span class="kp">true</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">002</span> <span class="o">&gt;</span> <span class="n">second_answer</span> <span class="o">=</span> <span class="kp">false</span>
+ <span class="o">=&gt;</span> <span class="kp">false</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">003</span> <span class="o">&gt;</span> <span class="n">first_answer</span> <span class="o">||</span> <span class="n">second_answer</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+</code></pre></div>
+<p><strong>!</strong> - if it is <em>not</em> true, then it returns true</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">012</span> <span class="o">&gt;</span> <span class="n">answer</span> <span class="o">=</span> <span class="kp">true</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">013</span> <span class="o">&gt;</span> <span class="o">!</span><span class="n">answer</span>
+ <span class="o">=&gt;</span> <span class="kp">false</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">014</span> <span class="o">&gt;</span> <span class="n">answer</span> <span class="o">=</span> <span class="kp">false</span>
+ <span class="o">=&gt;</span> <span class="kp">false</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">015</span> <span class="o">&gt;</span> <span class="o">!</span><span class="n">answer</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span>
+</code></pre></div>
+<h3><em>Why Do I Care?</em></h3>
+
+<p>Ruby is an Object-Oriented programming language.  That means that you are always creating object and then changing those objects and then showing those objects to the user.  This lesson is all about making those objects, figuring out what they are, and then doing stuff to them.</p>
+
+<h2>Exercise</h2>
+
+<p>Imagine your ideal partner.  Make a list of conditions that they would have to meet.  At least five.  If you don&#39;t get why the below works, find an instructor.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">00</span><span class="mi">8</span> <span class="o">&gt;</span> <span class="n">partner</span> <span class="o">=</span> <span class="s2">&quot;breathing&quot;</span>
+ <span class="o">=&gt;</span> <span class="s2">&quot;breathing&quot;</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">00</span><span class="mi">9</span> <span class="o">&gt;</span> <span class="n">partner</span> <span class="o">==</span> <span class="s2">&quot;breathing&quot;</span>
+ <span class="o">=&gt;</span> <span class="kp">true</span>
+</code></pre></div>
+<h2>Happiness Checkpoint</h2>
+
+<p>Find an instructor and be prepared to explain your code and your utterly unrealistic expecations for your partner.  </p>
+
+<h2>Project Guidelines</h2>
+
+<p>Without taking user input, imagine the scenario and what the user would want.  Try to use as many conditionals as possible.  </p>
+
+<h2>Solve</h2>
+
+<p>Create a menu with prices.</p>
+
+<h2>Extensions</h2>
+
+<p>Take user input using <a href="http://www.ruby-doc.org/docs/Tutorial/part_02/user_input.html">gets</a></p>
+
+<h2>Push Instructions</h2>
+
+<p>Push your Ruby doc to the Github repo you created yesterday.</p>
+
+<h2>Further Readings</h2>
+
+<ul>
+<li><a href="http://www.rubybacon.com/ruby-data-types/">RubyBacon: Ruby Data Types</a></li>
+<li><a href="http://www.tutorialspoint.com/ruby/ruby_operators.htm">Tutorial on Ruby Operators</a></li>
+</ul>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Github Repo:<br />
+                My Twitter:<br />
+                
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/RealTschoegl/opensourcebootcamp">github.com/RealTschoegl/opensourcebootcamp</a><br />
+                <a href="https://twitter.com/RealTschoegl">twitter.com/RealTschoegl</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>

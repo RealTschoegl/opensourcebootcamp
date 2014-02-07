@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Week 1 : Lesson 6 : Conditionals</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Open Source Ruby on Rails Course</a></h1>
+            <a class="extra" href="/">lessons</a>
+            <a class="extra" href="/mini-lessons">mini-lessons</a>
+            <a class="extra" href="/prework">prework</a>
+            <a class="extra" href="/projects">projects</a>
+            <a class="extra" href="/resources">resources</a>
+            <a class="extra" href="/skills">skills</a>
+            <a class="extra" href="/style">style</a>
+            <a class="extra" href="/terminology">terminology</a>
+
+          </div>
+
+          <h2>Week 1 : Lesson 6 : Conditionals</h2>
+<p class="meta">06 Mar 2014</p>
+
+==========================================
+
+<div class="post">
+<h2>Review</h2>
+
+<p>Review from <a href="/lesson/2014/03/05/lesson-variables-data-operators.html">Week 1 : Lesson 5 : Variables, Data Types, and Operators</a>.  One (or more) pair will rehash the previous session&#39;s lesson by teaching the basic learnings to the group.  They will explain it to the others by drawing a diagram, using an analogy, telling a story or in some other way creatively communicating the idea without using code.</p>
+
+<h2>Today&#39;s Project<a name="todays-project"></a></h2>
+
+<p>Part of <a href="/project/2014/03/07/project-bos.html">Week 1 : Project 1 : BOS</a>.</p>
+
+<h2>Conditionals</h2>
+
+<h3><em>What Is It?</em></h3>
+
+<p>Things change.  When things change, other things change.  Conditionals let you decide what changes when something else changes.  Managing the logic of these changes is a fundamental part of building code and, paradoxically, debugging (things changing that shouldn&#39;t or not changing when they should).</p>
+
+<h3><em>How Does It Work?</em></h3>
+
+<p>All of these conditionals do or do not do something until a condition is met.  Here are some examples of different types of conditionals.  </p>
+
+<h4>If, Else, Elsif</h4>
+
+<p>One thing to note: it stops at the first correct thing.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">2</span>
+   <span class="nb">puts</span> <span class="s2">&quot;x is greater than 2&quot;</span>
+<span class="k">elsif</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">x!</span><span class="o">=</span><span class="mi">0</span>
+   <span class="nb">puts</span> <span class="s2">&quot;x is 1&quot;</span>
+<span class="k">else</span>
+   <span class="nb">puts</span> <span class="s2">&quot;I can&#39;t guess the number&quot;</span>
+<span class="k">end</span>
+</code></pre></div>
+<h4>Unless</h4>
+
+<p>The opposite of If.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">unless</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">2</span>
+   <span class="nb">puts</span> <span class="s2">&quot;x is less than 2&quot;</span>
+ <span class="k">else</span>
+  <span class="nb">puts</span> <span class="s2">&quot;x is greater than 2&quot;</span>
+<span class="k">end</span>
+</code></pre></div>
+<h4>While Loops</h4>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">days_left</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>  
+
+<span class="k">while</span> <span class="n">days_left</span> <span class="o">!=</span> <span class="mi">0</span>  
+    <span class="nb">puts</span> <span class="s2">&quot;there are still </span><span class="si">#{</span><span class="n">days_left</span><span class="si">}</span><span class="s2"> in the week&quot;</span>  
+    <span class="n">days_left</span> <span class="o">-=</span> <span class="mi">1</span>  
+<span class="k">end</span> 
+</code></pre></div>
+<h4>Until</h4>
+
+<p>The opposite of while. </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">days_left</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>  
+
+<span class="k">until</span> <span class="n">days_left</span> <span class="o">==</span> <span class="mi">0</span>  
+    <span class="nb">puts</span> <span class="s2">&quot;there are still </span><span class="si">#{</span><span class="n">days_left</span><span class="si">}</span><span class="s2"> in the week&quot;</span>  
+    <span class="n">days_left</span> <span class="o">-=</span> <span class="mi">1</span>  
+<span class="k">end</span> 
+</code></pre></div>
+<h4>Case Statements</h4>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">age</span> <span class="o">=</span>  <span class="mi">5</span>
+<span class="k">case</span> <span class="n">age</span>
+<span class="k">when</span> <span class="mi">0</span> <span class="o">.</span><span class="n">.</span> <span class="mi">2</span>
+    <span class="nb">puts</span> <span class="s2">&quot;baby&quot;</span>
+<span class="k">when</span> <span class="mi">3</span> <span class="o">.</span><span class="n">.</span> <span class="mi">6</span>
+    <span class="nb">puts</span> <span class="s2">&quot;little child&quot;</span>
+<span class="k">when</span> <span class="mi">7</span> <span class="o">.</span><span class="n">.</span> <span class="mi">12</span>
+    <span class="nb">puts</span> <span class="s2">&quot;child&quot;</span>
+<span class="k">when</span> <span class="mi">13</span> <span class="o">.</span><span class="n">.</span> <span class="mi">18</span>
+    <span class="nb">puts</span> <span class="s2">&quot;youth&quot;</span>
+<span class="k">else</span>
+    <span class="nb">puts</span> <span class="s2">&quot;adult&quot;</span>
+<span class="k">end</span>
+</code></pre></div>
+<h4>Ternary Operators</h4>
+
+<p>The ternary operator looks terribly complicated but is really kind of straightforward once you get used to it.  </p>
+
+<p>Here is an example of a ternary operator in action:</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">006</span> <span class="o">&gt;</span> <span class="n">orange</span> <span class="o">=</span> <span class="mi">3</span>
+ <span class="o">=&gt;</span> <span class="mi">3</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">007</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">=</span> <span class="mi">5</span>
+ <span class="o">=&gt;</span> <span class="mi">5</span> 
+<span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p247</span> <span class="p">:</span><span class="mo">010</span> <span class="o">&gt;</span> <span class="n">apple</span> <span class="o">&gt;</span> <span class="n">orange</span> <span class="p">?</span>  <span class="p">(</span><span class="nb">puts</span> <span class="s2">&quot;yes&quot;</span><span class="p">)</span> <span class="p">:</span> <span class="p">(</span><span class="nb">puts</span> <span class="s2">&quot;no&quot;</span><span class="p">)</span>
+<span class="n">yes</span>
+</code></pre></div>
+<p>So how does this work?  It says that if the statement on the left (apple &gt; orange) is true, then print &quot;yes&quot; in the terminal, but if not, then print &quot;no&quot;.  This a very concise form of conditional statement that you will see more of later on. </p>
+
+<h3><em>What Can I Do With It?</em></h3>
+
+<p>Conditionals allow you to build logic into your applications. Putting these conditionals together, you can create logic that will make sure that your users give the information you want and you can give them the response that they want/need.   </p>
+
+<h3><em>Why Do I Care?</em></h3>
+
+<p>All but the smallest applications have options.  Conditionals allow you to manage options.  They also all have inputs and outputs and conditionals help you to manage those as well.  </p>
+
+<h2>Exercise</h2>
+
+<p>Order a cup of coffee using conditionals.</p>
+
+<h2>Happiness Checkpoint</h2>
+
+<p>Share your implementation with the class.  </p>
+
+<h2>Project Guidelines</h2>
+
+<p>Yesterday you made a menu using variables.  Now imagine a user going through that menu and make sure that they give you the inputs you want and they get the outputs they need to make decisions.</p>
+
+<h2>Solve</h2>
+
+<p>Make the application.  Then have someone in the pair next to your pair try it out.  </p>
+
+<h2>Extensions</h2>
+
+<p>Try to use all of the different conditionals in your application if you haven&#39;t already.  </p>
+
+<h2>Push Instructions</h2>
+
+<p>Push this code to your BOS repo.</p>
+
+<h2>Further Readings</h2>
+
+<ul>
+<li><a href="http://www.tutorialspoint.com/ruby/ruby_if_else.htm">Ruby If/Else Tutorial</a></li>
+<li><a href="http://net.tutsplus.com/tutorials/ruby/ruby-for-newbies-conditional-statements-and-loops/">Ruby for Newbies Conditional Statements and Loops</a></li>
+</ul>
+
+</div>
+
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Github Repo:<br />
+                My Twitter:<br />
+                
+              </p>
+            </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/RealTschoegl/opensourcebootcamp">github.com/RealTschoegl/opensourcebootcamp</a><br />
+                <a href="https://twitter.com/RealTschoegl">twitter.com/RealTschoegl</a><br />
+              </p>
+            </div>
+          </div>
+        </div>
+
+    </body>
+</html>
