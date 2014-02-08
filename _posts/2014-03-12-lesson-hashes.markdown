@@ -119,11 +119,23 @@ irb(main):011:0> students.merge!(a)
 
 What if I want to get information out of a hash? There are a number of methods to do so, but none of them that work sequentially as with an array. 
 
-If you know the key, it's pretty easy:
+If you know the key, it's pretty easy.  Just follow the name of the hash with the key that is associated with the value:
 
+{% highlight irb linenos %}
+irb(main):003:0> students
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+irb(main):004:0> students["Robinson"]
+=> "Craig"
+{% endhighlight %}
 
+Does it work the other way?  
 
-
+{% highlight irb linenos %}
+irb(main):005:0> students["Robinson"]
+=> "Craig"
+irb(main):006:0> students["Craig"]
+=> nil
+{% endhighlight %}
 
 
 ### _What Can I Do With It?_
