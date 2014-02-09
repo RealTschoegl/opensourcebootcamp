@@ -162,6 +162,10 @@ irb(main):014:0> students.has_key?("Thomasina")
 => false
 {% endhighlight %}
 
+delete
+select
+flatten
+
 ### _What Can I Do With It?_
 
 
