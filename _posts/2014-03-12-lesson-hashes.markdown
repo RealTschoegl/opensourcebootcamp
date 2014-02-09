@@ -137,6 +137,30 @@ irb(main):006:0> students["Craig"]
 => nil
 {% endhighlight %}
 
+No.
+
+What if I want to get out all of the elements in a hash?  This is where the **each** method comes in handy:
+
+{% highlight irb linenos %}
+irb(main):009:0> students.each {|key,value| puts key }
+Thomas
+Robinson
+Simpson
+Crusoe
+Brewster
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+{% endhighlight %}
+
+What if I don't know if it has a key?
+
+{% highlight irb linenos %}
+irb(main):012:0> students.has_key?("Thomas")
+=> true
+irb(main):013:0> students
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+irb(main):014:0> students.has_key?("Thomasina")
+=> false
+{% endhighlight %}
 
 ### _What Can I Do With It?_
 
