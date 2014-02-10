@@ -2,6 +2,7 @@
 layout: page
 title: "Week 10 : Lesson 2 : Responsiveness for Bootstrap"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -38,6 +39,7 @@ Making it responsive for mobile devices.
 
 ## Further Readings
 
+* [GRID: A Simple Guide to Responsive Design](http://www.adamkaplan.me/grid/)
 * [Beginner's Guide to Responsive Web Design](http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design)
 * [Responsive Web Design Techniques Tools and Design Strategies](http://mobile.smashingmagazine.com/2011/07/22/responsive-web-design-techniques-tools-and-design-strategies/)
 * [Sam Kapila's Responsive Web Design Checklist](http://www.samkapila.com/rwd/)
@@ -47,4 +49,3 @@ Making it responsive for mobile devices.
 * [Bootstrap Documentation on Their Responsive Utilities](http://getbootstrap.com/css/#responsive-utilities)
 * [Bootstrap Documentation on Their Responsive Images](http://getbootstrap.com/css/#overview-responsive-images)
 * [Mediaqueri.es](http://mediaqueri.es/)
-
