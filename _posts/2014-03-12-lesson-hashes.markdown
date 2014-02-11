@@ -57,7 +57,14 @@ irb(main):010:0> grocery_list[1] = "items"
 irb(main):011:0> grocery_list[Object.new] = "Thing"
 => "Thing"
 irb(main):012:0> grocery_list
-=> {"fruit"=>"mango", :fruit=>"apple", ["fruit", "salad"]=>"raspberry", 1=>"items", #<Object:0x007f8abd95ec10>=>"Thing"}
+=> {"fruit"=>"mango", :fruit => "apple", ["fruit", "salad"]=>"raspberry", 1=>"items", #<Object:0x007f8abd95ec10>=>"Thing"}
+{% endhighlight %}
+
+When using a symbol as a key, there is another notation that you can also use:
+
+{% highlight irb linenos %}
+irb(main):043:0> fruit = { pear: "anjou" }
+=> {:pear=>"anjou"}
 {% endhighlight %}
 
 You can even use variables as keys and values in a hash - or at least the values from the variables:
@@ -231,19 +238,51 @@ irb(main):014:0> playlist.include?(singer)
 => true
 {% endhighlight %}
 
+So we know that the singer has a song in our playlist.  How do we do that?  Well, we can create a hash that only has the artist's songs and then print those:  
+
+{% highlight irb linenos %}
+irb(main):034:0> if playlist.include?(singer) 
+irb(main):035:1> artist_list = playlist.select {|key,value| key == singer }
+irb(main):036:1> artist_list.each {|key,value| puts "#{key}: #{value}" }
+irb(main):037:1> else
+irb(main):038:1* puts "Nothing found."
+irb(main):039:1> end
+{% endhighlight %}
+
+And it works:
+
+{% highlight irb linenos %}
+Led Zeppelin: Kashmir
+=> {"Led Zeppelin"=>"Kashmir"}
+{% endhighlight %}
+
 ### _Why Do I Care?_
+
+Hashes are a fundamental method of data storage in Ruby.  Hashes allow us to put data in a place where it can be easily retrieved.  
 
 ## Exercise
 
+In the exercise above, where we created the playlist, the answer required at least six lines of code.  Can you make it shorter?  How many different ways do you have to do this?
+
 ## Happiness Checkpoint
+
+Flag an instructor to verify.  Get ready to show the class your answer.  
 
 ## Project Guidelines
 
+Create a hash directory for movies similar to IMDB.  Add as much or as little data as possible.  It should also be _partially_ searchable using user input.
+
 ## Solve
+
+Start small.  
 
 ## Extensions
 
+Add more search functionality along further parameters.
+
 ## Push Instructions
+
+Create a new repo and push to that repo.
 
 ## Further Readings
 
