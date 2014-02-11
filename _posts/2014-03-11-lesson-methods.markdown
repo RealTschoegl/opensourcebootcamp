@@ -17,7 +17,11 @@ Part of [Week 2 : Project 1 : Crime Blotter]({{ site.baseurl}}{% post_url 2014-0
 
 ### _What Is It?_
 
-Methods are objects that do things.  Isn't that cool?
+Methods are objects that do things.  Isn't that cool?  Or, more precisely:
+
+> A method in Ruby is a set of expressions that returns a value. With methods, one can organize their code into subroutines that can be easily invoked from other areas of their program. 
+
+Basically, a method is a piece of code that, when called, does something.  Up until now, all of the code that we have written has been with the aim of 
 
 ### _How Does It Work?_
 
