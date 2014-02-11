@@ -197,9 +197,27 @@ irb(main):011:0> students.flatten
 => ["Robinson", "Craig", "Crusoe", "Robinson", "Brewster", "Punky"]
 {% endhighlight %}
 
+This may not seem like a hugely valuable asset, but there are some methods or operations that are more easily performed with one type of data storage rather than the other.
+
 ### _What Can I Do With It?_
 
+Let's say I want to create a playlist of artists and their songs.  So, we can seed it (add in some sample data):
 
+{% highlight irb linenos %}
+irb(main):002:0> playlist = { "Led Zeppelin" => "Kashmir", "Nena" => "99 Luft Ballons", "Nirvana" => "Where Did You Sleep Last Night", "Modest Mouse" => "Satin in a Coffin" } 
+=> {"Led Zeppelin"=>"Kashmir", "Nena"=>"99 Luft Ballons", "Nirvana"=>"Where Did You Sleep Last Night", "Modest Mouse"=>"Satin in a Coffin"}
+{% endhighlight %}
+
+Now this is just data storage.  What if I want to print it out to console?  What can I do? Well, we can create a small method:
+
+{% highlight irb linenos %}
+irb(main):005:0> playlist.each {|key,value| puts "#{key}: #{value}."}
+Led Zeppelin: Kashmir.
+Nena: 99 Luft Ballons.
+Nirvana: Where Did You Sleep Last Night.
+Modest Mouse: Satin in a Coffin.
+=> {"Led Zeppelin"=>"Kashmir", "Nena"=>"99 Luft Ballons", "Nirvana"=>"Where Did You Sleep Last Night", "Modest Mouse"=>"Satin in a Coffin"
+{% endhighlight %}
 
 ### _Why Do I Care?_
 
