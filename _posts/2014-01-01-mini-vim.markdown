@@ -16,3 +16,4 @@ The lesson should last no longer that 15 minutes and include a live coding exerc
 * [Vimcasts](http://vimcasts.org/)
 * [Vimtutor](http://linuxcommand.org/man_pages/vimtutor1.html)
 * [Vimgolf](http://vimgolf.com/)
+* [Daniel Miessler: Study Vim](http://www.danielmiessler.com/study/vim/)
