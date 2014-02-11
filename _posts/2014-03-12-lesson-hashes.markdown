@@ -208,7 +208,7 @@ irb(main):002:0> playlist = { "Led Zeppelin" => "Kashmir", "Nena" => "99 Luft Ba
 => {"Led Zeppelin"=>"Kashmir", "Nena"=>"99 Luft Ballons", "Nirvana"=>"Where Did You Sleep Last Night", "Modest Mouse"=>"Satin in a Coffin"}
 {% endhighlight %}
 
-Now this is just data storage.  What if I want to print it out to console?  What can I do? Well, we can create a small method:
+Now this is just data storage.  What if I want to print it out so the user can see it?  What can I do? Well, we can create a small method that takes each key-value pair form the hash and prints it in a format we like:
 
 {% highlight irb linenos %}
 irb(main):005:0> playlist.each {|key,value| puts "#{key}: #{value}."}
@@ -217,6 +217,18 @@ Nena: 99 Luft Ballons.
 Nirvana: Where Did You Sleep Last Night.
 Modest Mouse: Satin in a Coffin.
 => {"Led Zeppelin"=>"Kashmir", "Nena"=>"99 Luft Ballons", "Nirvana"=>"Where Did You Sleep Last Night", "Modest Mouse"=>"Satin in a Coffin"
+{% endhighlight %}
+
+But who really wants to just print out a playlist?  What is more likely is that you want to be able to search the data store and find some piece of data you want. In this case, we are going to search the database for an artist and print out any songs of their's.  
+
+So first, we need to get the inputed artist and find out if there are any of his/her songs in the hash.  That can be done with an **include?** method:
+
+{% highlight irb linenos %}
+irb(main):013:0> singer = gets.chomp
+Led Zeppelin
+=> "Led Zeppelin"
+irb(main):014:0> playlist.include?(singer)
+=> true
 {% endhighlight %}
 
 ### _Why Do I Care?_
