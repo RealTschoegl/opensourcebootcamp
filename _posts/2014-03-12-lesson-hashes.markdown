@@ -162,9 +162,40 @@ irb(main):014:0> students.has_key?("Thomasina")
 => false
 {% endhighlight %}
 
-delete
-select
-flatten
+What if you only want to get those elements from a hash that meet a certain criteria, say that either the key or value contain the name Robinson.  **Select** returns a new hash consisting of entries for which the block returns true:
+
+{% highlight irb linenos %}
+irb(main):001:0> students = {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+irb(main):004:0> students.select {|key,value| key == "Robinson" || value == "Robinson"}
+=> {"Robinson"=>"Craig", "Crusoe"=>"Robinson"}
+irb(main):005:0> students
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+{% endhighlight %}
+
+If we want to delete something in the hash, then just specify the key and use the **delete** method (you can also use **delete_if** when there is a logic behind which entries should be deleted):
+
+{% highlight irb linenos %}
+irb(main):005:0> students
+=> {"Thomas"=>"John", "Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+irb(main):006:0> students.delete("Thomas")
+=> "John"
+irb(main):007:0> students
+=> {"Robinson"=>"Craig", "Simpson"=>"Homer", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+irb(main):009:0> students.delete_if {|key| key == "Simpson" }
+=> {"Robinson"=>"Craig", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+irb(main):010:0> students
+=> {"Robinson"=>"Craig", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+{% endhighlight %}
+
+Another useful method treats the case where we want to move data between a hash and an array: **flatten**.  
+
+{% highlight irb linenos %}
+irb(main):010:0> students
+=> {"Robinson"=>"Craig", "Crusoe"=>"Robinson", "Brewster"=>"Punky"}
+irb(main):011:0> students.flatten
+=> ["Robinson", "Craig", "Crusoe", "Robinson", "Brewster", "Punky"]
+{% endhighlight %}
 
 ### _What Can I Do With It?_
 
