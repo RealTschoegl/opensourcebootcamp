@@ -222,7 +222,7 @@ And we find that it does in fact take an argument.
 
 ### _What Can I Do With It?_
 
-Let's build something by chaining some methods together.  We are going to put some methods together to make a dinner.  
+Let's build something by chaining some methods together.  We are going to put some methods together to make a dinner.  Take a look at the code below:
 
 {% highlight irb linenos %}
 def appetizer(choice)
@@ -265,9 +265,19 @@ else
 end
 {% endhighlight %}
 
+What did we do?
+
+* We created methods that, with one response, produce one output and with a different input produce another output.  
+* We created conditionals that make different calls to a method depending on the input
+* We added some inputs to get user data
+
 ### _Why Do I Care?_
 
+Methods are the building blocks of complex programs and are also a fundamental part of how the language functions.
+
 ## Exercise
+
+
 
 ## Happiness Checkpoint
 
