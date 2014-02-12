@@ -149,6 +149,45 @@ Two
 
 ### _What Can I Do With It?_
 
+Let's build something by chaining some methods together.  We are going to put some methods together to make a dinner.  
+
+puts "Are you allergic to gluten?(Y/N)"
+allergy = gets.chomp
+puts "Do you dig on swine?(Y/N)"
+hallal = gets.chomp
+puts "Are you lactose intolerant?(Y/N)"
+vegetarian = gets.chomp
+
+if allergy == "Y"
+	appetizer("breadless")
+else
+	appetizer("breadful")
+end
+
+if hallal == "Y"
+	main("pigless")
+else
+	main("pigful")
+end
+
+if vegetarian == "Y"
+	dessert("dairyless")
+else
+	dessert("dairyful")
+end
+
+def appetizer(choice)
+	choice == "breadless" ? puts "Brussel Sprouts" : puts "Garlic Bread"
+end
+
+def main(choice)
+	choice == "pigless" ? puts "Scallops" : puts "Prosciutto"
+end
+
+def dessert(choice)
+	choice == "dairyless" ? puts "Strawberry Rhubarb Pie" : puts "Banana Cream Pie"
+end
+
 ### _Why Do I Care?_
 
 ## Exercise
