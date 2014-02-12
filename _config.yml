@@ -1,4 +1,4 @@
 name: Open Source Ruby on Rails Course
 markdown: redcarpet
 pygments: true
-baseurl: /
+baseurl: 
