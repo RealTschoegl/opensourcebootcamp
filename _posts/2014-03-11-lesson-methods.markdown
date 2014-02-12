@@ -218,54 +218,52 @@ irb(main):034:0> 12.method(:+).arity
 => 1
 {% endhighlight %}
 
-Let's do some looking.  The 12 is a Fixnum.  Does Fixnum have a plus method?  Yes, it does.  Can you really pass that method a parameter?  Yup.
-
-
-
-
-
-
+And we find that it does in fact take an argument.  
 
 ### _What Can I Do With It?_
 
 Let's build something by chaining some methods together.  We are going to put some methods together to make a dinner.  
 
+{% highlight irb linenos %}
+def appetizer(choice)
+  choice == "breadless" ? (puts "Brussel Sprouts") : (puts "Garlic Bread")
+end
+
+def main(choice)
+  choice == "pigless" ? (puts "Scallops") : (puts "Prosciutto")
+end
+
+def dessert(choice)
+  choice == "dairyless" ? (puts "Strawberry Rhubarb Pie") : (puts "Banana Cream Pie")
+end
+
 puts "Are you allergic to gluten?(Y/N)"
 allergy = gets.chomp
+
 puts "Do you dig on swine?(Y/N)"
 hallal = gets.chomp
+
 puts "Are you lactose intolerant?(Y/N)"
 vegetarian = gets.chomp
 
 if allergy == "Y"
-	appetizer("breadless")
+  appetizer("breadless")
 else
-	appetizer("breadful")
+  appetizer("breadful")
 end
 
 if hallal == "Y"
-	main("pigless")
+  main("pigless")
 else
-	main("pigful")
+  main("pigful")
 end
 
 if vegetarian == "Y"
-	dessert("dairyless")
+  dessert("dairyless")
 else
-	dessert("dairyful")
+  dessert("dairyful")
 end
-
-def appetizer(choice)
-	choice == "breadless" ? puts ("Brussel Sprouts") : puts ("Garlic Bread")
-end
-
-def main(choice)
-	choice == "pigless" ? puts ("Scallops" : puts ("Prosciutto")
-end
-
-def dessert(choice)
-	choice == "dairyless" ? puts ("Strawberry Rhubarb Pie" : puts ("Banana Cream Pie")
-end
+{% endhighlight %}
 
 ### _Why Do I Care?_
 
