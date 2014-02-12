@@ -147,6 +147,85 @@ One
 Two
 {% endhighlight %}
 
+There are also a couple of other ways to invoke a method although they can only really be called on an explicit object.  In truth, all methods that we looked at above are called on an object - the Object class, to which we added them.  
+
+So here, we create any old object and give it a method, fingers:
+
+{% highlight irb linenos %}
+irb(main):001:0> def fingers
+irb(main):002:1>   (0...10).each {|x| puts x * 2 }
+irb(main):003:1> end
+=> nil
+irb(main):004:0> fingers
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+=> 0...10
+irb(main):005:0> hand = Object.new
+=> #<Object:0x007fabae0904f0>
+irb(main):006:0> hand.method(:fingers)
+=> #<Method: Object#fingers>
+{% endhighlight %}
+
+We can then call this finger method in two different ways:
+
+{% highlight irb linenos %}
+hand.method(:fingers).call
+hand.send(:fingers)
+{% endhighlight %}
+
+There is one other thing worth taking a look at.  See this piece of code:
+
+{% highlight irb linenos %}
+irb(main):019:0> m = 12.method(:+)
+=> #<Method: Fixnum#+>
+irb(main):020:0> m.call(4)
+=> 16
+{% endhighlight %}
+
+Which can also be written a little more clearly this way:
+
+{% highlight irb linenos %}
+irb(main):025:0> 12.method(:+).call(4)
+=> 16
+{% endhighlight %}
+
+So what are we looking at?  First of all, what is 12?  
+
+{% highlight irb linenos %}
+irb(main):037:0> 12.class
+=> Fixnum
+{% endhighlight %}
+
+As we can se, 12 is just an object of the Fixnum class.  Next, we are calling a method on it.  What method?  The addition method - yes, addition is a method: 
+
+{% highlight irb linenos %}
+irb(main):039:0> Fixnum.public_instance_methods
+=> [:to_s, :inspect, :-@, :+, :-, :*, :/, :div, :%, :modulo, :divmod, :fdiv, :**, :abs, :magnitude, :==, :===, :<=>, :>, :>=, :<, :<=, :~, :&, :|, :^, :[], :<<, :>>, :to_f, :size, :zero?, :odd?, :even?, :succ, :integer?, :upto, :downto, :times, :next, :pred, :chr, :ord, :to_i, :to_int, :floor, :ceil, :truncate, :round, :gcd, :lcm, :gcdlcm, :numerator, :denominator, :to_r, :rationalize, :singleton_method_added, :coerce, :i, :+@, :eql?, :quo, :remainder, :real?, :nonzero?, :step, :to_c, :real, :imaginary, :imag, :abs2, :arg, :angle, :phase, :rectangular, :rect, :polar, :conjugate, :conj, :between?, :nil?, :=~, :!~, :hash, :class, :singleton_class, :clone, :dup, :taint, :tainted?, :untaint, :untrust, :untrusted?, :trust, :freeze, :frozen?, :methods, :singleton_methods, :protected_methods, :private_methods, :public_methods, :instance_variables, :instance_variable_get, :instance_variable_set, :instance_variable_defined?, :remove_instance_variable, :instance_of?, :kind_of?, :is_a?, :tap, :send, :public_send, :respond_to?, :extend, :display, :method, :public_method, :define_singleton_method, :object_id, :to_enum, :enum_for, :equal?, :!, :!=, :instance_eval, :instance_exec, :__send__, :__id__]
+{% endhighlight %}
+
+Finally, we want to look at how we call it - does it take arguments and how many?  For that, we can use the **arity** method:
+
+{% highlight irb linenos %}
+irb(main):034:0> 12.method(:+).arity
+=> 1
+{% endhighlight %}
+
+Let's do some looking.  The 12 is a Fixnum.  Does Fixnum have a plus method?  Yes, it does.  Can you really pass that method a parameter?  Yup.
+
+
+
+
+
+
+
 ### _What Can I Do With It?_
 
 Let's build something by chaining some methods together.  We are going to put some methods together to make a dinner.  
