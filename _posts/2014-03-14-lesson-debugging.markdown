@@ -21,9 +21,15 @@ You might not have noticed yet, but things go wrong.  There are two ways of deal
 
 ### _How Does It Work?_
 
-.inspect
-.class
-.methods
+* Explain how to use .inspect for debugging
+* Explain how to use .class to figure out what something is
+* Explain how to use .methods to find out what something can and cannot do
+* Explain how to make a single-line comment
+* Explain how to make a multi-line comment
+* Show some documentation guides for how to comment
+* Talk more about reading error messages
+* Show how to use Ruby Debugger
+* Make sure that Pry has been covered
 
 ### _What Can I Do With It?_
 
@@ -44,12 +50,10 @@ You might not have noticed yet, but things go wrong.  There are two ways of deal
 ## Further Readings
 
 * [Ruby Documentation for an Object](http://ruby-doc.org/core-2.1.0/Object.html)
-* [Pry Ruby Gem](http://pryrepl.org/)
 * [Documentation for Ruby Debugger](http://ruby-doc.org/stdlib-2.0.0/libdoc/debug/rdoc/DEBUGGER__.html)
 * [Debugging Rails Guide](http://guides.rubyonrails.org/debugging_rails_applications.html)
 * [Comments for Ruby](http://ruby.about.com/od/rubyfeatures/a/comment.htm)
 * [TomDoc for Ruby](http://tomdoc.org/)
-* [RailsCast 280: Pry with Rails](http://railscasts.com/episodes/280-pry-with-rails)
 
 ## Blogging
 
