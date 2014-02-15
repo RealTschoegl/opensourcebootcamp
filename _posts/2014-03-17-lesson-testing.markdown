@@ -17,13 +17,21 @@ Part of [Week 3 : Project 1 : Sales Page]({{ site.baseurl}}{% post_url 2014-03-2
 
 ### _What Is It?_
 
-So it works. For now.  Bwahaha. 
+One of the most commonly used phrases you are going to hear is TDD or Test-Driven Development.  The idea is that you first design a test for the piece of code you are going to write - then write only enough code to make sure that the test passes.
+
+The idea is to make testing an integral part of your work-flow, to create code that will be more easily maintained, and to improve the quality of your code by never writing unneccessary code.  This makes for code that is good today and just as good tomorrow.
+
+There are a number of different frameworks for testing - some of which we will get to later in this curriculum - but the one we are focusing on in this lesson is RSpec.
 
 ### _How Does It Work?_
+
+RSpec is a gem.  
 
 ### _What Can I Do With It?_
 
 ### _Why Do I Care?_
+
+So it works. For now.  Bwahaha. 
 
 ## Exercise
 
