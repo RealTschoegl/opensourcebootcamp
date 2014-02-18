@@ -25,7 +25,31 @@ There are a number of different frameworks for testing - some of which we will g
 
 ### _How Does It Work?_
 
-RSpec is a gem.  
+RSpec is a gem that adds a variety of methods, objects, and other tools you can use to help test the code you have written.
+
+* Show how/when to require it
+* Show what a describe block is
+* Demonstrate how to set an expectation
+* Explain what matchers are and gives some examples
+* Explain modifiers
+* Explain how to test a predicate and what some predicates are
+* Show how to mark a test as pending
+* Show how to use implicit subjects 
+* Show how to use implicit receivers
+* Show how to nest examples
+* Show how to use context
+* Show how to use let with subjects
+* Explain how to use hooks
+* Explain how to use tags
+* Show how to use shared examples
+* Explain about filters
+* Explain about metadata
+* Explain what a stub is
+* Explain what a mock is
+* Show how and when to use stubs and mocks
+* Explain how to mock and stub using params
+* Show how to use mocks and stubs with returns 
+* Explain how to make custom matchers
 
 ### _What Can I Do With It?_
 
