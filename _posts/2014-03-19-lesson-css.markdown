@@ -28,6 +28,9 @@ Style matters.  CSS or **Cascading Style Sheets** are documents that are used to
 * Explain selector priority (class vs. id vs. tag)
 * Show how you can use color
 * Show how you can alter text
+* Show how to make a list
+* Show how to make a table
+* Explain how the box model works
 * Show how you can manage positioning
 * Show how to use pseudo-classes
 
