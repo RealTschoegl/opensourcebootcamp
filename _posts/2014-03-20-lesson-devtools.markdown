@@ -2,6 +2,7 @@
 layout: post
 title: "Week 3 : Lesson 4 : DevTools"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -19,6 +20,14 @@ Part of [Week 3 : Project 1 : Sales Page]({{ site.baseurl}}{% post_url 2014-03-2
 Reloading the page is super irritating.
 
 ### _How Does It Work?_
+
+* Cover shortcuts
+* Explain how to inspect the dom
+* Show how to inspect the elements
+* Show how to change the dom
+* Show how to change the elements
+* Explain the Resources tab
+* Explain the Network tab
 
 ### _What Can I Do With It?_
 
@@ -41,6 +50,3 @@ Reloading the page is super irritating.
 * [DevTools Tutorial](https://www.codeschool.com/courses/discover-devtools)
 * [Chrome DevTools](https://developers.google.com/chrome-developer-tools/)
 * [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools)
-
-
-
