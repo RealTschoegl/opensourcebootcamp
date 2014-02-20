@@ -2,6 +2,7 @@
 layout: post
 title: "Week 3 : Lesson 3 : CSS"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -16,9 +17,19 @@ Part of [Week 3 : Project 1 : Sales Page]({{ site.baseurl}}{% post_url 2014-03-2
 
 ### _What Is It?_
 
-Style matters.
+Style matters.  CSS or **Cascading Style Sheets** are documents that are used to add styling to the content of the HTML.   
 
 ### _How Does It Work?_
+
+* Explain how to link to CSS
+* Explain selectors
+* Explain selector inheritance
+* Show how selectors can override each other
+* Explain selector priority (class vs. id vs. tag)
+* Show how you can use color
+* Show how you can alter text
+* Show how you can manage positioning
+* Show how to use pseudo-classes
 
 ### _What Can I Do With It?_
 
