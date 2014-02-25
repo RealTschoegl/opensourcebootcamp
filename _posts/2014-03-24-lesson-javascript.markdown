@@ -56,6 +56,7 @@ What makes the internet work.  Literally. Ish.
 * [Codecademy JavaScript Track](http://www.codecademy.com/tracks/javascript)
 * [Mozilla JavaScript Documentation](https://developer.mozilla.org/en-US/learn/javascript)
 * [Mozilla JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+* [Eloquent JavaScript](http://eloquentjavascript.net/)
 * [JS for Cats](http://jsforcats.com/)
 * [Crockford on JavaScript](http://yuiblog.com/crockford/)
 * [JavaScript Garden](http://bonsaiden.github.io/JavaScript-Garden/#intro)
