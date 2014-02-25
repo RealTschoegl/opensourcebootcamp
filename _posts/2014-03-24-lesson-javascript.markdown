@@ -16,9 +16,23 @@ Part of [Week 4 : Project 1 : Address Book]({{ site.baseurl}}{% post_url 2014-03
 ## JavaScript
 
 ### _What Is It?_
-What makes the internet work.  Literally.
+What makes the internet work.  Literally. Ish.
 
 ### _How Does It Work?_
+
+* Show what the console is in developer tools
+* Explain about the data types in JS
+* Assign a value to a variable
+* Show how to create a function
+* Explain how parameters work in JS
+* Show how to create a loop
+* Show how to create an array
+* Explain what an Object is
+* Show what some basic JavaScript functions are
+* Demonstrate how scope works in JS
+* Explain how this interacts with the dom
+* Explain how this connects with jQuery
+
 
 ### _What Can I Do With It?_
 
