@@ -2,6 +2,7 @@
 layout: post
 title: "Week 4 : Lesson 2 : JSON"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -19,6 +20,11 @@ Part of [Week 4 : Project 1 : Address Book]({{ site.baseurl}}{% post_url 2014-03
 JavaScript that people send to your page.  
 
 ### _How Does It Work?_
+
+* Show what JSON looks like
+* Show how to pull data from JSON using JS
+* Show how to store data from JSON
+* Explain how to use AJAX to load data from JSON
 
 ### _What Can I Do With It?_
 
