@@ -17,7 +17,23 @@ Part of [Week 3 : Project 1 : Sales Page]({{ site.baseurl}}{% post_url 2014-03-2
 
 ### _What Is It?_
 
+JavaScript made easy, jQuery is an easy way for you to include JS libraries for use in your document.  Basically, you can use JavaScript code that other people have written in a simple way and save yourself having to reinvent the wheel.  
+
 ### _How Does It Work?_
+
+* Show to include it in a page
+* Show how to load your jQuery on page load
+* Show how to add a class and remove a class
+* Explain how to create an effect that shows or hides content
+* Explain how to create an animation effect
+* Show how to create a custom animation
+* Explain how to use toggle
+* Explain how to listen for an event
+* Show how to trigger an event with an action
+* Explain how callbacks work
+* Show how an AJAX call is composed
+* Explain what a plugin is
+* Show how a plugin is used
 
 ### _What Can I Do With It?_
 
