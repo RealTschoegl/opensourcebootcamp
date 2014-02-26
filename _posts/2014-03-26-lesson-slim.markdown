@@ -2,6 +2,7 @@
 layout: post
 title: "Week 4 : Lesson 4 : Slim"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -15,9 +16,22 @@ Part of [Week 4 : Project 1 : Address Book]({{ site.baseurl}}{% post_url 2014-03
 ## Slim
 
 ### _What Is It?_
-Make HTML easy on yourself.  You're worth it.
+Make HTML easy on yourself.  You're worth it. Slim is one of a number of what are called "templating engines" that trim a lot of the fat out of HTML documents, making them easier to use and read. HAML is another commonly used one.   
 
 ### _How Does It Work?_
+
+* Show how it doesn't use closing tags
+* Show how you can still use style tags
+* Show how to use shortcuts for id and class tags
+* Explain how the control code, - , works
+* Explain how to use the output code, =
+* Explain how to use the output without html escaping code, == 
+* Show how to display text with same line or pipe
+* Show how to use inline tags
+* Show how to manage attributes
+* Show how to create dynamic 
+* Explain how to create custom shortcuts
+* Show how to use Ruby attributes
 
 ### _What Can I Do With It?_
 
@@ -39,5 +53,3 @@ Make HTML easy on yourself.  You're worth it.
 
 * [Slim Documentation](http://slim-lang.com/)
 * [Slim Gem](https://github.com/slim-template/slim)
-
-
