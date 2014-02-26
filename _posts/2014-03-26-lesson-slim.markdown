@@ -26,10 +26,11 @@ Make HTML easy on yourself.  You're worth it. Slim is one of a number of what ar
 * Explain how the control code, - , works
 * Explain how to use the output code, =
 * Explain how to use the output without html escaping code, == 
+* Show how to multiple ='s on one line
 * Show how to display text with same line or pipe
 * Show how to use inline tags
 * Show how to manage attributes
-* Show how to create dynamic 
+* Show how to create dynamic tags
 * Explain how to create custom shortcuts
 * Show how to use Ruby attributes
 
