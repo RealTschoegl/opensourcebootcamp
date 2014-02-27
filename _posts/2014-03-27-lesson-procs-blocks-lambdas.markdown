@@ -23,6 +23,9 @@ Someday, in an interview, someone will ask you what these are all about.
 * Show a block
 * Show a proc
 * Show a lambda
+* Explain the difference between a block and procs/lambdas
+* Explain the difference between a proc and a lambda
+* Give examples of places where blocks, procs, and lambdas are used in Ruby
 
 ### _What Can I Do With It?_
 
