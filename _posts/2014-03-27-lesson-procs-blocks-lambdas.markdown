@@ -2,6 +2,7 @@
 layout: post
 title: "Week 4 : Lesson 5 : Procs, Blocks, and Lambdas"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -18,6 +19,10 @@ Part of [Week 4 : Project 1 : Address Book]({{ site.baseurl}}{% post_url 2014-03
 Someday, in an interview, someone will ask you what these are all about.
 
 ### _How Does It Work?_
+
+* Show a block
+* Show a proc
+* Show a lambda
 
 ### _What Can I Do With It?_
 
@@ -44,4 +49,3 @@ Someday, in an interview, someone will ask you what these are all about.
 * [Study Guide on Blocks, Procs, and Lambdas](http://net.tutsplus.com/tutorials/ruby/ruby-on-rails-study-guide-blocks-procs-and-lambdas/)
 * [RubyMonk on Blocks, Procs, and Lambdas](http://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/18-blocks/lessons/64-blocks-procs-lambdas)
 * [Codecademy Course on Procs, Blocks, and Lambdas](http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/0/1?curriculum_id=5059f8619189a5000201fbcb)
-
