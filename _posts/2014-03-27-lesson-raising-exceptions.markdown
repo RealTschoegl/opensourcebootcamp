@@ -2,6 +2,7 @@
 layout: post
 title: "Week 4 : Lesson 6 : Raising Exceptions"
 category: lesson
+published: true
 ---
 
 ## Review
@@ -19,6 +20,13 @@ Part of [Week 4 : Project 1 : Address Book]({{ site.baseurl}}{% post_url 2014-03
 Your users need to do their own debugging.
 
 ### _How Does It Work?_
+
+* Show some common exception messages and explain what they mean
+* Show how to add a raise message for any exception
+* Show what an exception rescue is and how to write one
+* Explain what an ensure clause is and what it does
+* Explain what retry is and when to use it
+* Show how to create your own exceptions
 
 ### _What Can I Do With It?_
 
@@ -41,4 +49,5 @@ Your users need to do their own debugging.
 * [Ruby Documentation on Exceptions](http://www.ruby-doc.org/core-2.1.0/Exception.html)
 * [Ruby Exceptions](http://rubylearning.com/satishtalim/ruby_exceptions.html)
 * [Ruby Exceptions and Exception Handling](http://www.skorks.com/2009/09/ruby-exceptions-and-exception-handling/)
+* [The Bastard's Book of Ruby: Exception and Error Handling](http://ruby.bastardsbook.com/chapters/exception-handling/)
 * [RailsCast 53: Handing Exceptions, Revised](http://railscasts.com/episodes/53-handling-exceptions-revised?view=asciicast)
