@@ -48,6 +48,12 @@ Here is a glossary of some of the terms that you will hear people mention pretty
 
 <p></p>
 
+<dt><strong>Spiking</strong></dt>
+
+<dd>Create spike solutions to figure out answers to tough technical or design problems. A spike solution is a very simple program to explore potential solutions. Build the spike to only addresses the problem under examination and ignore all other concerns. Most spikes are not good enough to keep, so expect to throw it away. The goal is reducing the risk of a technical problem or increase the reliability of a user story's estimate.</dd>
+
+<p></p>
+
 <dt><strong>TDD</strong></dt>
 
 <dd>Test-driven development (TDD), is an evolutionary approach to development which combines test-first development, where you write a test before you write just enough production code to fulfill that test, and refactoring.</dd>
